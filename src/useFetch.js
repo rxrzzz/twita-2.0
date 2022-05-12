@@ -3,18 +3,15 @@ import React, { useEffect, useState } from "react";
 
 const useFetch = (url) => {
   const [data, setData] = useState("");
-  const [pending, serPending] = useState(false);
-  const [error, setError] = useState("");
+
   useEffect(() => {
-    serPending(true);
     axios
       .get(url)
       .then((response) => setData(response.data))
-      .then(serPending(false))
-      .catch((err) => setError(err.message));
+      .catch((err) => console.log(err.message));
   }, []);
 
-  return {data, pending, error}
+  return {data}
 };
 
 export default useFetch;
