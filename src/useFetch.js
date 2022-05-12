@@ -12,7 +12,7 @@ const useFetch = (url) => {
       .then((response) => setData(response.data))
       .then(serPending(false))
       .catch((err) => setError(err.message));
-  });
+  }, []);
 
   return {data, pending, error}
 };

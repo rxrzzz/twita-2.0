@@ -4,7 +4,7 @@ import styles from './styles/Register.js'
 
 
 const Register = () => {
-    const 
+    
     const date = new Date()
     const formik = useFormik({
         initialValues: {
