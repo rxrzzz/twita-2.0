@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import React from "react";
-import useFetch from "../useFetch.js";
+import useFetch from "../useFetch";
 
 const Login = () => {
-  const { data: persons, error } = useFetch("htp://localhost:7000/persons");
+  const { data: persons, error } = useFetch("http://localhost:7000/people");
 
   const validate = (values) => {
     const errors = {};
@@ -15,40 +15,69 @@ const Login = () => {
 
     if (values.username) {
       let personFound = persons.some(
-        (person) => (person.username = values.username)
+        (person) => person.username == values.username
       );
       if (!personFound) {
         errors.username = "Invalid username";
       }
     } else if (values.password) {
       let personFound = persons.some(
-        (person) => (person.password = values.password)
+        (person) => person.password == values.password
       );
       if (!personFound) {
-        errors.password = "Invalid username";
+        errors.password = "Invalid password";
       }
     }
     return errors;
   };
-  const formik = () =>
-    useFormik({
-      initialValues: {
-        username: "",
-        password: "",
-      },
-      validateOnChange: false,
-      validateOnBlur: false,
-      onSubmit: () => {
-        if(formik.errors.length > 0){
-            void(0)
-        }else{
-            console.log('Person found')
-        }
-      },
-      validate,
-    });
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    validateOnChange: false,
+    validateOnBlur: false,
+    onSubmit: () => {
+      if (formik.errors.length > 0) {
+        void 0;
+      } else {
+        console.log("Person found");
+      }
+    },
+    validate,
+  });
 
-  return <div></div>;
+  return (
+    <div>
+      <form onSubmit={formik.handleSubmit}>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.username && formik.touched.username && (
+            <div>{formik.errors.username}</div>
+          )}
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.username && formik.touched.username && (
+            <div>{formik.errors.username}</div>
+          )}
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 };
 
 export default Login;

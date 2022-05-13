@@ -10,7 +10,7 @@ const useFetch = (url) => {
       .get(url)
       .then((response) => setData(response.data))
       .catch((err) => setError(err.message));
-  }, []);
+  }, [url]);
 
   return {data, error}
 };
