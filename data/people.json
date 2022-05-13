@@ -1,5 +1,14 @@
 {
-    "people": [
-        
-    ]
+  "people": [
+    {
+      "firstName": "Temi",
+      "lastName": "Temi",
+      "dateOfBirth": "2022-05-05",
+      "username": "temi",
+      "password": "temi",
+      "confirmPassword": "temi",
+      "dpUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "id": 1
+    }
+  ]
 }

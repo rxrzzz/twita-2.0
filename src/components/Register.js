@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Register.module.css";
 import image from "../images/register_form_image.jpg";
+import axios from "axios";
 
 const Register = () => {
   const [dpStyle, setDpStyle] = useState("male");
@@ -31,7 +32,11 @@ const Register = () => {
     },
 
     onSubmit: () => {
-      console.log(formik.values);
+      axios
+        .post("http://localhost:7000/people", formik.values)
+        .then(
+          localStorage.setItem("personInStorage", JSON.stringify(formik.values))
+        );
     },
   });
 
@@ -81,78 +86,76 @@ const Register = () => {
           </div>
         </div>
 
-        <form onSubmit={formik.handleSubmit}>
-          <div className={styles.personal_details}>
-            <div>
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                name="firstName"
-                value={formik.values.firstName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                type="text"
-                name="lastName"
-                value={formik.values.lastName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="dateOfBirth">Date Of Birth</label>
-              <input
-                type="text"
-                name="dateOfBirth"
-                value={formik.values.dateOfBirth}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                name="username"
-                value={formik.values.username}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="password">Password</label>
-              <input
-                type="text"
-                name="password"
-                value={formik.values.password}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="text"
-                name="firstName"
-                value={formik.values.confirmPassword}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-
-            <button style={styles.button} type="submit">
-              Submit
-            </button>
+        <form onSubmit={formik.handleSubmit} className={styles.form}>
+          <div>
+            <label htmlFor="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
           </div>
+
+          <div>
+            <label htmlFor="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              value={formik.values.lastName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="dateOfBirth">Date Of Birth</label>
+            <input
+              type="date"
+              name="dateOfBirth"
+              value={formik.values.dateOfBirth}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              value={formik.values.username}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={formik.values.confirmPassword}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+
+          <button className={styles.button} type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
