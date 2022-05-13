@@ -5,7 +5,7 @@ import PostList from './PostList'
 import Trending from './Trending'
 
 const Home = () => {
-    const person = localStorage.getItem("personInStorage")
+    const person = JSON.parse(localStorage.getItem("personInStorage"))
     const people = useFetch('http://localhost:7000/people')
     const posts = null
   return (

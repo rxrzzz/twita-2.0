@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({person}) => {
   return (
-    <div>Header</div>
+    <div>
+        {person.firstName}
+        {person.lastName}
+        <img src={person.dpUrl} alt="Profile Picture" />
+    </div>
   )
 }
 
