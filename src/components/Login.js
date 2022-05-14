@@ -46,7 +46,7 @@ const Login = () => {
         for (let i of persons){
           if  (values.username === i.username && values.password === i.password){
             localStorage.setItem("personInStorage", JSON.stringify(i))
-            navigate('/')
+            console.log(localStorage.getItem("personInStorage"))
           }
         }
       }
@@ -56,6 +56,7 @@ const Login = () => {
 
   return (
     <div>
+      {error && <div>{error}</div>}
       <form onSubmit={formik.handleSubmit}>
         <div>
           <label htmlFor="username">Username</label>

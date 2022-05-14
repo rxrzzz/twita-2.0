@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
+import { useNavigate } from "react-router";
 
 const CreatePost = () => {
+  const navigate = useNavigate();
   const validate = (values) => {
     const errors = {};
     if (!values.postContent || values.postContent.length < 1) {
@@ -18,14 +20,15 @@ const CreatePost = () => {
       creatorFirstName: person.firstName,
       creatorLastName: person.lastName,
       creatorDp: person.dpUrl,
-      dateCreated: `${date.getDay} ${date.getTime}`,
+      dateCreated: date.toLocaleString(),
       postContent: "",
     },
-    onSubmit: (values) => {
+    onSubmit: () => {
       axios
-        .post("http//localhost:3010/posts", values)
-        .then(console.log("Done"))
-        .catch(err => console.log(err))
+        .post("http://localhost:3010/posts", formik.values)
+
+        .then(navigate("/"))
+        .catch((err) => console.log(err));
     },
     validateOnBlur: false,
     validateOnChange: false,

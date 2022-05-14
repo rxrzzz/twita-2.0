@@ -1,5 +1,13 @@
 {
-    "posts": [
-        
-    ]
+  "posts": [
+    {
+      "creator": "temi",
+      "creatorFirstName": "Temi",
+      "creatorLastName": "Temi",
+      "creatorDp": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "dateCreated": "function getDay() {\n    [native code]\n} function getTime() {\n    [native code]\n}",
+      "postContent": "aaaaaa",
+      "id": 1
+    }
+  ]
 }

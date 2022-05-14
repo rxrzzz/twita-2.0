@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={person ? <Navigate to='/login'/>:""} />
+          <Route path="/" element={person ? <Navigate to='/home'/>:<Navigate to='/login'/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/create_post" element={<CreatePost />} />
         </Routes>
       </BrowserRouter>
