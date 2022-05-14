@@ -19,6 +19,16 @@
       "confirmPassword": "akin",
       "dpUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
       "id": 2
+    },
+    {
+      "firstName": "akin",
+      "lastName": "akin",
+      "dateOfBirth": "2022-05-01",
+      "username": "sakura",
+      "password": "sakura",
+      "confirmPassword": "sakura",
+      "dpUrl": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%230000a0",
+      "id": 3
     }
   ]
 }

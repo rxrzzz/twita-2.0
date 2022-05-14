@@ -29,7 +29,7 @@ const CreatePost = () => {
 
         .then(navigate("/"))
         .catch((err) => console.log(err));
-    },
+    },validate,
     validateOnBlur: false,
     validateOnChange: false,
   });

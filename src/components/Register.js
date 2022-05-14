@@ -5,6 +5,56 @@ import image from "../images/register_form_image.jpg";
 import axios from "axios";
 
 const Register = () => {
+  // const validate = (values) => {
+  //   const errors = {};
+
+  //   if (values.username) {
+  //     for (let i of profiles) {
+  //       if (i["username"] == values.username) {
+  //         errors.username = "username not available";
+  //       }
+  //     }
+  //   } else if (!values.username) {
+  //     errors.username = "enter your username";
+  //     console.log(errors.username);
+  //   }
+
+  //   if (!values.firstName) {
+  //     errors.firstName = "enter your first name";
+  //   } else if (!values.lastName) {
+  //     errors.lastName = "enter your last name";
+  //   } else if (!values.dateOfBirth) {
+  //     errors.dateOfBirth = "choose date of birth";
+  //   } else if (!values.username) {
+  //     errors.username = "enter your desired username";
+  //   }
+
+  //   if (!values.password) {
+  //     errors.password = "enter a password";
+  //   } else if (!values.confirmPassword) {
+  //     errors.confirmPassword = "please confirm your password";
+  //   }
+
+  //   if (values.password != values.confirmPassword) {
+  //     errors.confirmPassword = "input the correct password";
+  //   }
+  //   return errors;
+  // };
+
+  const [dpStyle, setDpStyle] = useState("male");
+  const [dpColor, setDpColor] = useState("000000");
+  const [dpUrl, setDpUrl] = useState(
+    "https://avatars.dicebear.com/api/male/john.svg?background=%23000000"
+  );
+
+  useEffect(() => {
+    setDpUrl(
+      `https://avatars.dicebear.com/api/${dpStyle}/${dpStyle}.svg?background=%23${dpColor.replace(
+        "#",
+        ""
+      )}`
+    );
+  }, [dpStyle, dpColor]);
 
   const formik = useFormik({
     initialValues: {
@@ -13,20 +63,23 @@ const Register = () => {
       dateOfBirth: "",
       username: "",
       password: "",
-      dpStyle: '',
-      dpColor: '',
       confirmPassword: "",
-
-      dpUrl: `https://avatars.dicebear.com/api/${dpStyle}/${dpStyle}.svg?background=%23${dpColor.replace("#", "")}`,
     },
 
     onSubmit: () => {
       axios
-        .post("http://localhost:7000/people", formik.values)
+        .post("http://localhost:7000/people", {
+          ...formik.values,
+          dpUrl: dpUrl,
+        })
         .then(
-          localStorage.setItem("personInStorage", JSON.stringify(formik.values))
+          localStorage.setItem(
+            "personInStorage",
+            JSON.stringify({ ...formik.values, dpUrl: dpUrl })
+          )
         );
     },
+
   });
 
   return (
@@ -35,18 +88,16 @@ const Register = () => {
         <img src={image} alt="#" />
       </div>
       <div className={styles.form_section}>
-        <div className={styles.dp}>
-          <img src={formik.values.dpUrl} alt="" width="150px" height="150px" />
-        </div>
-        <form onSubmit={formik.handleSubmit} className={styles.form}>
+        <div className={styles.dp_section}>
+          <div className={styles.dp}>
+            <img src={dpUrl} alt="" width="150px" height="150px" />
+          </div>
           <div className={styles.dp_form}>
             <div>
               <label htmlFor="profilePicStyle">Picture Type</label>
               <select
-                name="dpStyle"
-                value={formik.values.dpStyle}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                name="profilePicStyle"
+                onChange={(e) => setDpStyle(e.target.value)}
               >
                 <option value="adventurer">Adventurer</option>
                 <option value="adventurer-neutral">Adventurer Neutral</option>
@@ -70,13 +121,14 @@ const Register = () => {
               <label htmlFor="color">Color</label>
               <input
                 type="color"
-                name="dpColor"
-                value={formik.values.dpColor}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                name="color"
+                onChange={(e) => setDpColor(e.target.value)}
               />
             </div>
           </div>
+        </div>
+
+        <form onSubmit={formik.handleSubmit} className={styles.form}>
           <div>
             <label htmlFor="firstName">First Name</label>
             <input
