@@ -4,6 +4,7 @@ import Register from "./components/Register";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/home/Home";
 import CreatePost from "./components/home/CreatePost";
+import PostDetails from "./components/home/PostDetails";
 
 function App() {
   const person = localStorage.getItem("personInStorage");
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/create_post" element={<CreatePost />} />
+          <Route exact path="/posts/:id" element={<PostDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

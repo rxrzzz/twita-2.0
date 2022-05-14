@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <div>
         <Header person={person}/>
-
         <PostList posts={posts} error={postsError}/>
 
     </div>
