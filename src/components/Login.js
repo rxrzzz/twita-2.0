@@ -1,9 +1,11 @@
 import { useFormik } from "formik";
 import React from "react";
+import { useNavigate } from "react-router";
 import useFetch from "../useFetch";
 
 const Login = () => {
   const { data: persons, error } = useFetch("http://localhost:7000/people");
+  const navigate =useNavigate()
 
   const validate = (values) => {
     const errors = {};
@@ -15,14 +17,14 @@ const Login = () => {
 
     if (values.username) {
       let personFound = persons.some(
-        (person) => person.username == values.username
+        (person) => person.username === values.username
       );
       if (!personFound) {
         errors.username = "Invalid username";
       }
     } else if (values.password) {
       let personFound = persons.some(
-        (person) => person.password == values.password
+        (person) => person.password === values.password
       );
       if (!personFound) {
         errors.password = "Invalid password";
@@ -37,11 +39,16 @@ const Login = () => {
     },
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: () => {
+    onSubmit: (values) => {
       if (formik.errors.length > 0) {
         void 0;
       } else {
-        console.log("Person found");
+        for (let i of persons){
+          if  (values.username === i.username && values.password === i.password){
+            localStorage.setItem("personInStorage", JSON.stringify(i))
+            navigate('/')
+          }
+        }
       }
     },
     validate,

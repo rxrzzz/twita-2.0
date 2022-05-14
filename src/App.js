@@ -1,7 +1,7 @@
 import "./App.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/home/Home";
 import CreatePost from "./components/home/CreatePost";
 
@@ -9,23 +9,14 @@ function App() {
   const person = localStorage.getItem("personInStorage");
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Routes>
-          {person ? (
-            <Route exact path="/login" element={<Login/>} />
-          ) : (
-            <Route exact path="/home" element={<Home/>} />
-          )}
-
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={person ? <Navigate to='/login'/>:""} />
           <Route path="/register" element={<Register />} />
-
-          <Route path="/create_post" element={<CreatePost />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/create_post" element={<CreatePost />} />
         </Routes>
-      </Router>
-      {/* <Register/> */}
-      <Login />
+      </BrowserRouter>
     </div>
   );
 }
