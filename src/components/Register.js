@@ -5,20 +5,6 @@ import image from "../images/register_form_image.jpg";
 import axios from "axios";
 
 const Register = () => {
-  const [dpStyle, setDpStyle] = useState("male");
-  const [dpColor, setDpColor] = useState("000000");
-  const [dpUrl, setDpUrl] = useState(
-    "https://avatars.dicebear.com/api/male/john.svg?background=%23000000"
-  );
-
-  useEffect(() => {
-    setDpUrl(
-      `https://avatars.dicebear.com/api/${dpStyle}/${dpStyle}.svg?background=%23${dpColor.replace(
-        "#",
-        ""
-      )}`
-    );
-  }, [dpStyle, dpColor]);
 
   const formik = useFormik({
     initialValues: {
@@ -27,8 +13,11 @@ const Register = () => {
       dateOfBirth: "",
       username: "",
       password: "",
+      dpStyle: '',
+      dpColor: '',
       confirmPassword: "",
-      dpUrl: dpUrl,
+
+      dpUrl: `https://avatars.dicebear.com/api/${dpStyle}/${dpStyle}.svg?background=%23${dpColor.replace("#", "")}`,
     },
 
     onSubmit: () => {
@@ -46,16 +35,18 @@ const Register = () => {
         <img src={image} alt="#" />
       </div>
       <div className={styles.form_section}>
-        <div className={styles.dp_section}>
-          <div className={styles.dp}>
-            <img src={dpUrl} alt="" width="150px" height="150px" />
-          </div>
+        <div className={styles.dp}>
+          <img src={formik.values.dpUrl} alt="" width="150px" height="150px" />
+        </div>
+        <form onSubmit={formik.handleSubmit} className={styles.form}>
           <div className={styles.dp_form}>
             <div>
               <label htmlFor="profilePicStyle">Picture Type</label>
               <select
-                name="profilePicStyle"
-                onChange={(e) => setDpStyle(e.target.value)}
+                name="dpStyle"
+                value={formik.values.dpStyle}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               >
                 <option value="adventurer">Adventurer</option>
                 <option value="adventurer-neutral">Adventurer Neutral</option>
@@ -79,14 +70,13 @@ const Register = () => {
               <label htmlFor="color">Color</label>
               <input
                 type="color"
-                name="color"
-                onChange={(e) => setDpColor(e.target.value)}
+                name="dpColor"
+                value={formik.values.dpColor}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
             </div>
           </div>
-        </div>
-
-        <form onSubmit={formik.handleSubmit} className={styles.form}>
           <div>
             <label htmlFor="firstName">First Name</label>
             <input

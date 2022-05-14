@@ -5,14 +5,16 @@ import PostList from './PostList'
 import Trending from './Trending'
 
 const Home = () => {
-    const person = localStorage.getItem("personInStorage")
-    const people = useFetch('http://localhost:7000/people')
-    const posts = null
+    const person = JSON.parse(localStorage.getItem("personInStorage"))
+    const {data: people, error: peopleError} = useFetch('http://localhost:7000/people')
+    const {data: posts, error: postsError} = useFetch('http://localhost:3010/posts')
+    
   return (
     <div>
         <Header person={person}/>
-        <Trending people={people}/>
-        <PostList posts={posts}/>
+        <Trending people={people} error={peopleError}/>
+        <PostList posts={posts} error={postsError}/>
+
     </div>
   )
 }

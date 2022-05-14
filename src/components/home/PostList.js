@@ -1,8 +1,10 @@
 import React from 'react'
 
-const PostList = () => {
+const PostList = ({posts, postsError}) => {
   return (
-    <div>PostList</div>
+    <div>
+     {posts && posts.map((post) => <div key={post.id}>{post.creatorFirstName} <img src={post.creatorDp}/></div>)} 
+    </div>
   )
 }
 
