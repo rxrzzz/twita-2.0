@@ -1,5 +1,24 @@
 {
   "posts": [
-
+    {
+      "creator": "adeleye",
+      "creatorFirstName": "Adeleye",
+      "creatorLastName": "Temiloluwa",
+      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "dateCreated": "15/05/2022, 12:28:45",
+      "postContent": "alaaaaaaaaafin.",
+      "comments": {},
+      "id": 1
+    },
+    {
+      "creator": "ridwan",
+      "creatorFirstName": "Adebakin",
+      "creatorLastName": "Ridwan",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
+      "dateCreated": "15/05/2022, 12:37:21",
+      "postContent": "werey leleyi ni",
+      "comments": {},
+      "id": 2
+    }
   ]
 }

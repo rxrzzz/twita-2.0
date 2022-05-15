@@ -1,5 +1,24 @@
 {
   "people": [
-
+    {
+      "firstName": "Adeleye",
+      "lastName": "Temiloluwa",
+      "dateOfBirth": "2022-04-28",
+      "username": "adeleye",
+      "password": "adeleye",
+      "confirmPassword": "adeleye",
+      "dpUrl": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "id": 1
+    },
+    {
+      "firstName": "Adebakin",
+      "lastName": "Ridwan",
+      "dateOfBirth": "2022-04-28",
+      "username": "ridwan",
+      "password": "ridwan",
+      "confirmPassword": "ridwan",
+      "dpUrl": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
+      "id": 2
+    }
   ]
 }

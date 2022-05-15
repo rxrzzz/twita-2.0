@@ -4,13 +4,11 @@ const CommentList = ({ comments, post, error }) => {
   return (
     <div>
       {comments &&
-        post &&
-        comments.filter((comment) => comment.postCommentedOn == post.id).map((comment) => 
-          <article>
-            {comment.commentCreator}
-            {comment.commentContent}
-          </article>
-        )}{" "}
+        comments.filter((comment) => comment.postCommentedOn == post.id).map(comment => (
+            <article key={comment.id}>
+                {comment.commentContent}
+            </article>
+        ))}
       {error && <p>{error}</p>}
     </div>
   );

@@ -1,12 +1,14 @@
 import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 
 const Login = () => {
   const { data: persons, error } = useFetch("http://localhost:7000/people");
   const navigate =useNavigate()
 
+/*Check Out the Register section of the codebase to understand the validate function and the Formik library */
   const validate = (values) => {
     const errors = {};
     if (!values.username) {
@@ -17,14 +19,14 @@ const Login = () => {
 
     if (values.username) {
       let personFound = persons.some(
-        (person) => person.username === values.username
+        (person) => person.username == values.username
       );
       if (!personFound) {
         errors.username = "Invalid username";
       }
     } else if (values.password) {
       let personFound = persons.some(
-        (person) => person.password === values.password
+        (person) => person.password == values.password
       );
       if (!personFound) {
         errors.password = "Invalid password";
@@ -32,6 +34,7 @@ const Login = () => {
     }
     return errors;
   };
+
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -39,6 +42,11 @@ const Login = () => {
     },
     validateOnChange: false,
     validateOnBlur: false,
+
+    /*If the form notices an error, it will do nothing on submit.
+     If there are no errors however it will store the person's details
+     in their local storage and then navigate them to the home page*/
+
     onSubmit: (values) => {
       if (formik.errors.length > 0) {
         void 0;
@@ -46,7 +54,7 @@ const Login = () => {
         for (let i of persons){
           if  (values.username === i.username && values.password === i.password){
             localStorage.setItem("personInStorage", JSON.stringify(i))
-            console.log(localStorage.getItem("personInStorage"))
+            navigate('/home')
           }
         }
       }
@@ -83,6 +91,7 @@ const Login = () => {
           )}
         </div>
         <button type="submit">Submit</button>
+        <p>Do not have an account? <Link to='/register'>Register.</Link></p>
       </form>
     </div>
   );

@@ -4,6 +4,7 @@ import styles from "../styles/Register.module.css";
 import image from "../images/register_form_image.jpg";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   /*The use navigate method is meant for switching between routes */
@@ -51,7 +52,7 @@ const Register = () => {
 
     /*Read up on Formik from their website:  https://formik.org ,
     or watch this Youtube tutorial: https://www.youtube.com/watch?v=bMSHmf_ckM8 */
-    
+
     <div className={styles.register}>
       <div className={styles.image}>
         <img src={image} alt="#" />
@@ -167,7 +168,9 @@ const Register = () => {
           <button className={styles.button} type="submit">
             Submit
           </button>
+          <p>Already have an account? <Link to='/login'>Login.</Link></p>
         </form>
+
       </div>
     </div>
   );

@@ -1,5 +1,18 @@
 {
   "comments": [
-
+    {
+      "commentCreator": "adeleye",
+      "dateCommented": "15/05/2022, 12:30:00",
+      "commentContent": "aaaaa",
+      "postCommentedOn": "1",
+      "id": 1
+    },
+    {
+      "commentCreator": "ridwan",
+      "dateCommented": "15/05/2022, 12:37:33",
+      "commentContent": "ogbeni",
+      "postCommentedOn": "1",
+      "id": 2
+    }
   ]
 }
