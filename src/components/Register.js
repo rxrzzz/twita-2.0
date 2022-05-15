@@ -60,9 +60,7 @@ const Register = () => {
     <div className={styles.registration_form}>
       <div className={styles.dp_form}>
         <div className={styles.dp}>
-          <img src={dpUrl} alt="" width="150px" height="150px" />
-        </div>
-        <div className={styles.dp_content}>
+          <img src={dpUrl} alt="Profile Picture" />
           <div>
             <label htmlFor="profilePicStyle">Picture Type</label>
             <select
@@ -97,6 +95,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+
       <main className={styles.details_form}>
         <form onSubmit={formik.handleSubmit} className={styles.form}>
           <div>
