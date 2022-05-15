@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Register.module.css";
-import image from "../images/register_form_image.jpg";
+import image from "../images/larry1.svg";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -59,6 +59,7 @@ const Register = () => {
   return (
     <div className={styles.registration_form}>
       <div className={styles.dp_form}>
+        <h1>Register</h1>
         <div className={styles.dp}>
           <img src={dpUrl} alt="Profile Picture" />
           <div>
@@ -171,10 +172,10 @@ const Register = () => {
             Already have an account? <Link to="/login">Login.</Link>
           </p>
         </form>
-        <div className={styles.decorative_image}>
-          <img src="" alt="" />
-        </div>
       </main>
+      <div className={styles.decorative_image}>
+        <img src={image} alt="#" />
+      </div>
     </div>
   );
 };
