@@ -1,8 +1,10 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React from 'react'
+import { useParams } from 'react-router'
 
 const Comments = ({post}) => {
+  const {id} = useParams()
   const person = JSON.parse(localStorage.getItem("personInStorage"))
   const date = new Date()
 
@@ -18,10 +20,11 @@ const Comments = ({post}) => {
             commentCreator: person.username,
             dateCommented: date.toLocaleString(),
             commentContent: '',
-            postCommentedOn: post.id,
+            postCommentedOn: id
                                     
         },
         onSubmit: () => {
+          alert(JSON.stringify(formik.values))
           axios.post("http://localhost:3020/comments", formik.values)
           console.log('Done')
         }

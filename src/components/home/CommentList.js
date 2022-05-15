@@ -5,12 +5,12 @@ const CommentList = ({ comments, post, error }) => {
     <div>
       {comments &&
         post &&
-        comments.filter((comment) => comment.postCommentedOn == post.id).map((comment) => (
+        comments.filter((comment) => comment.postCommentedOn == post.id).map((comment) => 
           <article>
             {comment.commentCreator}
             {comment.commentContent}
           </article>
-        ))}{" "}
+        )}{" "}
       {error && <p>{error}</p>}
     </div>
   );

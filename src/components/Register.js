@@ -3,43 +3,11 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Register.module.css";
 import image from "../images/register_form_image.jpg";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 const Register = () => {
-  // const validate = (values) => {
-  //   const errors = {};
-
-  //   if (values.username) {
-  //     for (let i of profiles) {
-  //       if (i["username"] == values.username) {
-  //         errors.username = "username not available";
-  //       }
-  //     }
-  //   } else if (!values.username) {
-  //     errors.username = "enter your username";
-  //     console.log(errors.username);
-  //   }
-
-  //   if (!values.firstName) {
-  //     errors.firstName = "enter your first name";
-  //   } else if (!values.lastName) {
-  //     errors.lastName = "enter your last name";
-  //   } else if (!values.dateOfBirth) {
-  //     errors.dateOfBirth = "choose date of birth";
-  //   } else if (!values.username) {
-  //     errors.username = "enter your desired username";
-  //   }
-
-  //   if (!values.password) {
-  //     errors.password = "enter a password";
-  //   } else if (!values.confirmPassword) {
-  //     errors.confirmPassword = "please confirm your password";
-  //   }
-
-  //   if (values.password != values.confirmPassword) {
-  //     errors.confirmPassword = "input the correct password";
-  //   }
-  //   return errors;
-  // };
+  /*The use navigate method is meant for switching between routes */
+  const history = useNavigate();
 
   const [dpStyle, setDpStyle] = useState("male");
   const [dpColor, setDpColor] = useState("000000");
@@ -55,6 +23,8 @@ const Register = () => {
       )}`
     );
   }, [dpStyle, dpColor]);
+  /*Formik is a React library used for handling form validations.
+  It is a tedious process using HTML Constraints and the Constraints Validation API */
 
   const formik = useFormik({
     initialValues: {
@@ -66,23 +36,22 @@ const Register = () => {
       confirmPassword: "",
     },
 
+    /*On Submit, the values in the form should be sent to the people server and then redirect them to the login page.  */
+
     onSubmit: () => {
       axios
         .post("http://localhost:7000/people", {
           ...formik.values,
           dpUrl: dpUrl,
-        })
-        .then(
-          localStorage.setItem(
-            "personInStorage",
-            JSON.stringify({ ...formik.values, dpUrl: dpUrl })
-          )
-        );
+        }).then(history('/login'))
     },
-
   });
 
   return (
+
+    /*Read up on Formik from their website:  https://formik.org ,
+    or watch this Youtube tutorial: https://www.youtube.com/watch?v=bMSHmf_ckM8 */
+    
     <div className={styles.register}>
       <div className={styles.image}>
         <img src={image} alt="#" />
