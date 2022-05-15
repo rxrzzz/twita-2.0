@@ -8,7 +8,7 @@ const Comments = ({post}) => {
 
   const validate = (values) => {
     const errors = {}
-    if (!values.commentContent || commentContent.length < 1){
+    if (!values.commentContent){
       errors.commentContent = 'Enter a comment'
     }
     return errors
@@ -22,7 +22,8 @@ const Comments = ({post}) => {
                                     
         },
         onSubmit: () => {
-          axios.post(`http://localhost:3020/comments`, formik.values)
+          axios.post("http://localhost:3020/comments", formik.values)
+          console.log('Done')
         }
     })
 
@@ -30,8 +31,8 @@ const Comments = ({post}) => {
     <div>
       <form onSubmit={formik.handleSubmit}>
         {post && <h1>Replying to {post.creator}</h1>}
-          <textarea name="commentCreator" value={formik.values.commentCreator} cols="4" rows="20" onChange={formik.handleChange} onBlur={formik.handleBlur}></textarea>
-          {formik.errors.username && formik.touched.username && <p>{formik.errors.username}</p>}
+          <textarea name="commentContent" value={formik.values.commentContent} cols="4" rows="20" onChange={formik.handleChange} onBlur={formik.handleBlur}></textarea>
+          {formik.errors.commentContent && formik.touched.commentContent && <p>{formik.errors.commentContent}</p>}
           <button type='submit'>Comment</button>
       </form>
     </div>

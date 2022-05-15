@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const CommentList = ({person, posts, error}) => {
+const CommentList = ({ comments, post, error }) => {
   return (
-    <div>CommentList</div>
-  )
-}
+    <div>
+      {comments &&
+        post &&
+        comments.filter((comment) => comment.postCommentedOn == post.id).map((comment) => (
+          <article>
+            {comment.commentCreator}
+            {comment.commentContent}
+          </article>
+        ))}{" "}
+      {error && <p>{error}</p>}
+    </div>
+  );
+};
 
-export default CommentList
+export default CommentList;

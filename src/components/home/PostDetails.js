@@ -8,7 +8,7 @@ const PostDetails = () => {
   const { id } = useParams();
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
   const { data: post, error } = useFetch("http://localhost:3010/posts/" + id);
-  const {data: posts, postsError} = useFetch('http://localhost:3010/posts')
+  const {data: comments, postsError} = useFetch('http://localhost:3020/comments')
   return (
     <div>
       {error && <p>{error}</p>}
@@ -19,7 +19,7 @@ const PostDetails = () => {
       )}
       {personInStorage.username == post.creator && <button>Delete</button>}
       <Comments post={post}/>
-      <CommentList person={personInStorage} posts={posts} error={postsError}/>
+      <CommentList comments={comments} post={post} error={postsError}/>
     </div>
   );
 };
