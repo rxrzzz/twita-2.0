@@ -4,16 +4,13 @@ import styles from "../styles/Header.module.css";
 
 const Header = ({ person }) => {
   return (
-    <div>
+    <div className={styles.header}>
       <div className={styles.person_details}>
-        {person.firstName}
-        {person.lastName}
+        <img src={person.dpUrl} alt="Profile Picture" />
       </div>
       <div className={styles.create_post}>
-        
+        <Link to="/create_post" className={styles.link}>What's on your mind?</Link>
       </div>
-      <img src={person.dpUrl} alt="Profile Picture" width="150px" />
-      <Link to="/create_post">Create Post</Link>
     </div>
   );
 };

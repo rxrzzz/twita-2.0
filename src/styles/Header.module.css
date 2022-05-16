@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    background-color: gainsboro;
+    margin-block-end: 2rem;
+    margin-block-start: 1rem;
+}
+
+.person_details img{
+    width: 100px;
+    border: 2px solid black;
+}
+
+.create_post{
+    font-size: clamp(1.4rem, 1.1vw, 2rem)
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    transition: opacity .4s;
+}
+
+.link:hover{
+   opacity: .7;
+}
+

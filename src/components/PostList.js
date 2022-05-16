@@ -7,7 +7,7 @@ const PostList = ({ posts, postsError }) => {
       {postsError && <p>{postsError}</p>}
       {posts &&
         posts.map((post) => (
-          <div key={post.id}>
+          <div key={post.id} className>
             <Link to={`/posts/${post.id}`}>
               {post.creatorFirstName} <img src={post.creatorDp} width="150px" />{" "}
               {post.postContent}
