@@ -1,0 +1,13 @@
+.header {
+  width: 95%;
+  max-width: 1000px;
+  border: 1px solid red;
+  margin: auto;
+}
+
+.postlist {
+  width: 95%;
+  max-width: 1000px;
+  border: 1px solid red;
+  margin: auto;
+}

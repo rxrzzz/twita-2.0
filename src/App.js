@@ -2,9 +2,9 @@ import "./App.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./components/home/Home";
-import CreatePost from "./components/home/CreatePost";
-import PostDetails from "./components/home/PostDetails";
+import Home from "./components/Home";
+import CreatePost from "./components/CreatePost";
+import PostDetails from "./components/PostDetails";
 
 function App() {
   const person = localStorage.getItem("personInStorage");

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router";
-import useFetch from "../../useFetch";
+import useFetch from "../useFetch";
 import CommentList from "./CommentList";
 import Comments from "./Comments";
 

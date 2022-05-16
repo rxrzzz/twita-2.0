@@ -19,6 +19,16 @@
       "postContent": "werey leleyi ni",
       "comments": {},
       "id": 2
+    },
+    {
+      "creator": "ridwan",
+      "creatorFirstName": "Adebakin",
+      "creatorLastName": "Ridwan",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
+      "dateCreated": "16/05/2022, 05:40:01",
+      "postContent": "akin",
+      "comments": {},
+      "id": 3
     }
   ]
 }
