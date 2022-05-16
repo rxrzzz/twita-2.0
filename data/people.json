@@ -19,6 +19,16 @@
       "confirmPassword": "ridwan",
       "dpUrl": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
       "id": 2
+    },
+    {
+      "firstName": "Adeyola",
+      "lastName": "WannaRollWithTheGeezer",
+      "dateOfBirth": "2022-04-26",
+      "username": "adeyola",
+      "password": "adeyola",
+      "confirmPassword": "adeyola",
+      "dpUrl": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23ffffff",
+      "id": 3
     }
   ]
 }
