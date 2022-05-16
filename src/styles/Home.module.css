@@ -1,12 +1,23 @@
+.app_header{
+    width: 98%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.app_header img{
+    width: 125px;
+    height: 53  px;
+}
+
 .header {
-  width: 95%;
+  width: 98%;
   max-width: 1000px;
   border: 1px solid red;
   margin: auto;
 }
 
 .postlist {
-  width: 95%;
+  width: 98%;
   max-width: 1000px;
   border: 1px solid red;
   margin: auto;
