@@ -29,6 +29,26 @@
       "postContent": "akin",
       "comments": {},
       "id": 3
+    },
+    {
+      "creator": "ridwan",
+      "creatorFirstName": "Adebakin",
+      "creatorLastName": "Ridwan",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
+      "dateCreated": "16/05/2022, 12:36:08",
+      "postContent": "ohayo mina san. daijyobu deska?",
+      "comments": {},
+      "id": 4
+    },
+    {
+      "creator": "ridwan",
+      "creatorFirstName": "Adebakin",
+      "creatorLastName": "Ridwan",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
+      "dateCreated": "16/05/2022, 18:50:39",
+      "postContent": "Nike Dunks come my way.",
+      "comments": {},
+      "id": 5
     }
   ]
 }

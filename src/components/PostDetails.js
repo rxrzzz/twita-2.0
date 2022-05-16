@@ -1,7 +1,8 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router";
+import { useParams } from "react-router";
 import useFetch from "../useFetch";
 import CommentList from "./CommentList";
+import styles from "../styles/Home.module.css";
 import Comments from "./Comments";
 
 const PostDetails = () => {
@@ -13,7 +14,7 @@ const PostDetails = () => {
     <div>
       {error && <p>{error}</p>}
       {post && (
-        <div>
+        <div >
           {post.postContent} {post.creatorDp}
         </div>
       )}
