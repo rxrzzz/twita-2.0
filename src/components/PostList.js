@@ -11,12 +11,15 @@ const PostList = ({ posts, postsError }) => {
           <div key={post.id} className={styles.post}>
             <div className={styles.post_header}>
               <img src={post.creatorDp} width="150px" />
-              <p>@{post.creator}</p>
+              <div>
+                <h2>{post.creatorFirstName} {post.creatorLastName}</h2>
+                <p>@{post.creator}</p>
+              </div>
             </div>
             <Link to={`/posts/${post.id}`} className={styles.post_content}>
               <div>
-                {post.postContent}
-                {post.dateCreated}
+                <h2>{post.postContent}</h2>
+                <p>{post.dateCreated}</p>
               </div>
             </Link>
             <div className={styles.post_footer}>
