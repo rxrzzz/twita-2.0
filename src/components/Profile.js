@@ -1,11 +1,12 @@
 import React from 'react'
+import useFetch from '../useFetch';
 
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
   const { data: posts, error: postsError } = useFetch(
     "http://localhost:3010/posts"
   );
-  
+
   return (
     <div>Profile</div>
   )

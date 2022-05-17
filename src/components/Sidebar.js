@@ -1,17 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/Sidebar.module.css";
-import useFetch from "../useFetch";
 
 const Sidebar = () => {
-  const person = JSON.parse(localStorage.getItem("personInStorage"));
-  const { data: posts, error: postsError } = useFetch(
-    "http://localhost:3010/posts"
-  );
-  return <div className={styles.sidebar}>
+  const navigate = useNavigate()
+  const handleLogout = () => {
+    localStorage.clear()
+    navigate('/login')
+  }
+
+return <div className={styles.sidebar}>
       <p>twita.</p>
       <Link to='/profile' className={styles.link}><span>👩🏽‍🦲</span>Profile</Link>
-      <button><span>📲</span>Log Out</button>
+      <button onClick={handleLogout}><span>📲</span>Log Out</button>
   </div>;
 };
 

@@ -30,6 +30,7 @@ p:hover{
   background-color: transparent;
   border: none;
   height: 33%;
+  cursor: pointer;
 }
 
 .link {
