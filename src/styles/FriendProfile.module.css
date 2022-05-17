@@ -10,6 +10,7 @@
   .topbar img{
     width: 30px;
     margin-block-end: .4rem;
+    cursor: pointer;
   }
   
   .topbar{

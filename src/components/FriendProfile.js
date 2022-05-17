@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import styles from "../styles/FriendProfile.module.css";
@@ -11,13 +11,11 @@ const FriendProfile = () => {
   const { data: posts, error: postsError } = useFetch(
     "http://localhost:3010/posts"
   );
-
+const navigate = useNavigate()
   return (
     <div className={styles.profile}>
       <div className={styles.topbar}>
-        <Link to="/">
-          <img src={backbutton} alt="Go back" />
-        </Link>
+        <img src={backbutton} alt="Go back" onClick={() => navigate(-1)} />
       </div>
 
       {person && (

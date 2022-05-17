@@ -81,6 +81,22 @@
       "commentContent": "Welcome back chief.",
       "postCommentedOn": "6",
       "id": 11
+    },
+    {
+      "commentCreator": "adeleye",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "dateCommented": "17/05/2022, 21:29:04",
+      "commentContent": "suppppppp.",
+      "postCommentedOn": "4",
+      "id": 12
+    },
+    {
+      "commentCreator": "afo",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
+      "dateCommented": "17/05/2022, 21:46:47",
+      "commentContent": "hehe.",
+      "postCommentedOn": "9",
+      "id": 13
     }
   ]
 }

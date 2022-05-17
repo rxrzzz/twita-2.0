@@ -49,6 +49,46 @@
       "postContent": "Nike Dunks come my way.",
       "comments": {},
       "id": 5
+    },
+    {
+      "creator": "adeleye",
+      "creatorFirstName": "Adeleye",
+      "creatorLastName": "Temiloluwa",
+      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "dateCreated": "17/05/2022, 21:28:48",
+      "postContent": "ohayo.",
+      "comments": {},
+      "id": 6
+    },
+    {
+      "creator": "adeleye",
+      "creatorFirstName": "Adeleye",
+      "creatorLastName": "Temiloluwa",
+      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "dateCreated": "17/05/2022, 21:44:27",
+      "postContent": "Test drive hehe. 🎈",
+      "comments": {},
+      "id": 7
+    },
+    {
+      "creator": "adeleye",
+      "creatorFirstName": "Adeleye",
+      "creatorLastName": "Temiloluwa",
+      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "dateCreated": "17/05/2022, 21:44:45",
+      "postContent": "Mubarak is a simp. 🕶",
+      "comments": {},
+      "id": 8
+    },
+    {
+      "creator": "afo",
+      "creatorFirstName": "Afolabi",
+      "creatorLastName": "Afo",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
+      "dateCreated": "17/05/2022, 21:46:20",
+      "postContent": "I'm new to Twita. David is queer though.",
+      "comments": {},
+      "id": 9
     }
   ]
 }

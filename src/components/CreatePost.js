@@ -2,6 +2,8 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router";
+import styles from "../styles/CreatePost.module.css";
+import backbutton from "../images/back-button.png";
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -22,29 +24,36 @@ const CreatePost = () => {
       creatorDp: person.dpUrl,
       dateCreated: date.toLocaleString(),
       postContent: "",
-      comments: {}
+      comments: {},
     },
     onSubmit: () => {
       axios
         .post("http://localhost:3010/posts", formik.values)
-
-        .then(navigate("/"))
+        .then(navigate(-1))
         .catch((err) => console.log(err));
-    },validate,
+    },
+    validate,
     validateOnBlur: false,
     validateOnChange: false,
   });
   return (
     <div>
-      <form onSubmit={formik.handleSubmit}>
+      <div className={styles.topbar}>
+        <img src={backbutton} alt="Go back" onClick={() => navigate(-1)}/>
+      </div>
+      <form onSubmit={formik.handleSubmit} className={styles.form}>
         <textarea
+          type="text"
+          className={styles.input}
+          autoFocus="true"
+          draggable="false"
           name="postContent"
           value={formik.values.postContent}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Create Post</button>
       </form>
     </div>
   );

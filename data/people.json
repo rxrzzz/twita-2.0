@@ -29,6 +29,16 @@
       "confirmPassword": "adeyola",
       "dpUrl": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23ffffff",
       "id": 3
+    },
+    {
+      "firstName": "Afolabi",
+      "lastName": "Afo",
+      "dateOfBirth": "2022-04-27",
+      "username": "afo",
+      "password": "afo",
+      "confirmPassword": "afo",
+      "dpUrl": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
+      "id": 4
     }
   ]
 }

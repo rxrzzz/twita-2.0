@@ -11,7 +11,7 @@ const Sidebar = () => {
 
 return <div className={styles.sidebar}>
       <Link to='/' className={styles.link}>twita.</Link>
-      <button onClick={handleLogout}><span>📲</span>Log Out</button>
+      <button onClick={handleLogout} className={styles.button}>Log Out</button>
   </div>;
 };
 
