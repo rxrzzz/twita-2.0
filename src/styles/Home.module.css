@@ -4,6 +4,12 @@
     margin: auto;
 }
 
+.home{
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 70%;
+}
 .app_header img{
     width: 125px;
     height: 53  px;
