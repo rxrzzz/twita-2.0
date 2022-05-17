@@ -8,7 +8,7 @@ const PostList = ({ posts, postsError }) => {
       {postsError && <p>{postsError}</p>}
       {posts &&
         posts.map((post) => (
-          <div key={post.id} className={styles.post}>
+          <article key={post.id} className={styles.post}>
             <div className={styles.post_header}>
               <img src={post.creatorDp} width="150px" />
               <div>
@@ -27,7 +27,7 @@ const PostList = ({ posts, postsError }) => {
               <p>Comment</p>
               <p>Share</p>
             </div>
-          </div>
+          </article>
         ))}
     </div>
   );
