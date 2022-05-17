@@ -65,6 +65,14 @@
       "commentContent": "aaaaaaaaa",
       "postCommentedOn": "3",
       "id": 9
+    },
+    {
+      "commentCreator": "adeyola",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23ffffff",
+      "dateCommented": "17/05/2022, 14:12:14",
+      "commentContent": "🎈🎈🎈🎈🎈🎈🎈",
+      "postCommentedOn": "5",
+      "id": 10
     }
   ]
 }

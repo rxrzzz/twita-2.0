@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import CreatePost from "./components/CreatePost";
 import PostDetails from "./components/PostDetails";
+import Profile from "./components/Profile";
 
 function App() {
   const person = localStorage.getItem("personInStorage");
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/create_post" element={<CreatePost />} />
           <Route exact path="/posts/:id" element={<PostDetails />} />
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
     </div>
