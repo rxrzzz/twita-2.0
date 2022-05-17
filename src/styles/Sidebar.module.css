@@ -3,6 +3,7 @@
   max-width: 98%;
   margin: auto;
   display: flex;
+  margin-block-end: 2rem;
   justify-content: space-around;
 }
 

@@ -10,7 +10,7 @@ const CommentList = ({ comments, post, error }) => {
           .filter((comment) => comment.postCommentedOn == post.id)
           .map((comment) => (
             <article key={comment.id} className={styles.comment}>
-              <Link to={`/${post.creator}/profile`}>
+              <Link to={`/${comment.commentCreator}/profile`}>
                 <div className={styles.comment_header}>
                   <p>@{comment.commentCreator}</p>
                 </div>

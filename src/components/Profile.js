@@ -1,21 +1,22 @@
 import React from "react";
 import useFetch from "../useFetch";
 import styles from "../styles/Profile.module.css";
-import { Link } from "react-router-dom";
-import backbutton from '../images/back-button.png'
+import { Link, useNavigate } from "react-router-dom";
+import backbutton from "../images/back-button.png";
 
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
   const { data: posts, error: postsError } = useFetch(
     "http://localhost:3010/posts"
   );
+  const navigate = useNavigate()
 
   return (
     <div className={styles.profile}>
       <div className={styles.topbar}>
-        <Link to="/">
-          <img src={backbutton} alt="Go back" />
-        </Link>
+        <div className="topbar">
+          <img src={backbutton} alt="Go back" onClick={() => navigate(-1)}/>
+        </div>
       </div>
       <section className={styles.top_section}>
         <div className={styles.dp}>

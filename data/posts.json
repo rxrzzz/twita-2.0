@@ -89,6 +89,46 @@
       "postContent": "I'm new to Twita. David is queer though.",
       "comments": {},
       "id": 9
+    },
+    {
+      "creator": "afo",
+      "creatorFirstName": "Afolabi",
+      "creatorLastName": "Afo",
+      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
+      "dateCreated": "17/05/2022, 21:52:46",
+      "postContent": "I need to go eat something.",
+      "comments": {},
+      "id": 10
+    },
+    {
+      "creator": "kayy",
+      "creatorFirstName": "Kay",
+      "creatorLastName": "isNumb",
+      "creatorDp": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
+      "dateCreated": "17/05/2022, 21:57:50",
+      "postContent": "I know Mubarak is a simp. comot my follower's list. 😡",
+      "comments": {},
+      "id": 11
+    },
+    {
+      "creator": "kayy",
+      "creatorFirstName": "Kay",
+      "creatorLastName": "isNumb",
+      "creatorDp": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
+      "dateCreated": "17/05/2022, 21:58:43",
+      "postContent": "Send funds boss. 😀",
+      "comments": {},
+      "id": 12
+    },
+    {
+      "creator": "kayy",
+      "creatorFirstName": "Kay",
+      "creatorLastName": "isNumb",
+      "creatorDp": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
+      "dateCreated": "17/05/2022, 22:02:34",
+      "postContent": "Yeahhhhh.",
+      "comments": {},
+      "id": 13
     }
   ]
 }

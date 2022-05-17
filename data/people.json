@@ -39,6 +39,26 @@
       "confirmPassword": "afo",
       "dpUrl": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
       "id": 4
+    },
+    {
+      "firstName": "Kay",
+      "lastName": "isNumb",
+      "dateOfBirth": "2022-04-25",
+      "username": "kay",
+      "password": "kay",
+      "confirmPassword": "kay",
+      "dpUrl": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
+      "id": 5
+    },
+    {
+      "firstName": "Kay",
+      "lastName": "isNumb",
+      "dateOfBirth": "2022-05-02",
+      "username": "kayy",
+      "password": "kayy",
+      "confirmPassword": "kayy",
+      "dpUrl": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
+      "id": 6
     }
   ]
 }

@@ -46,7 +46,6 @@ const CreatePost = () => {
           type="text"
           className={styles.input}
           autoFocus="true"
-          draggable="false"
           name="postContent"
           value={formik.values.postContent}
           onChange={formik.handleChange}

@@ -11,6 +11,8 @@
     height: 30rem;
     font-family: Roboto;
     border: 3px solid black;
+    resize: none;
+    font-family: "Poppins", sans-serif;
 }
 
 .form button {
