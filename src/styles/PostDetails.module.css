@@ -53,7 +53,7 @@
   text-align: start;
   text-decoration: none;
   font-size: clamp(1.2rem, 1.3vw, 1.8rem);
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #23272a;
 }
 
 .post_footer {
