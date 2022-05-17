@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/CommentList.module.css";
 const CommentList = ({ comments, post, error }) => {
-
   return (
     <div>
       {comments &&
@@ -10,13 +9,12 @@ const CommentList = ({ comments, post, error }) => {
           .map((comment) => (
             <article key={comment.id} className={styles.comment}>
               <div className={styles.comment_header}>
-                <img src={comment.commentCreatorDp} alt={comment.commentCreator} width='50px' />
-                @{comment.commentCreator}
+                <p>@{comment.commentCreator}</p>
               </div>
-              <p>Replying to @{post.creator}</p>
+              <p className={styles.p}>Replying to @{post.creator}</p>
               <div className={styles.comment_content}>
-                {comment.commentContent}
-                {comment.dateCommented}
+                <h2>{comment.commentContent}</h2>
+                <p>{comment.dateCommented}</p>
               </div>
             </article>
           ))}
