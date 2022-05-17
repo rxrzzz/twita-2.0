@@ -2,6 +2,7 @@ import React from "react";
 import useFetch from "../useFetch";
 import styles from "../styles/Profile.module.css";
 import { Link } from "react-router-dom";
+import backbutton from '../images/back-button.png'
 
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
@@ -11,6 +12,11 @@ const Profile = () => {
 
   return (
     <div className={styles.profile}>
+      <div className={styles.topbar}>
+        <Link to="/">
+          <img src={backbutton} alt="Go back" />
+        </Link>
+      </div>
       <section className={styles.top_section}>
         <div className={styles.dp}>
           <img src={person.dpUrl} alt={person.firstName} />

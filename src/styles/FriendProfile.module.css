@@ -1,0 +1,102 @@
+.post {
+    border: 3px solid #23272a;
+    background-color: transparent;
+    width: 700px;
+    max-width: 98%;
+    margin: auto;
+    margin-block-end: .2rem;
+  }
+
+  .topbar img{
+    width: 30px;
+    margin-block-end: .4rem;
+  }
+  
+  .topbar{
+    width: 98%;
+    max-width: 700px;
+    margin: auto;
+    margin-block-end: 1rem;
+    border-bottom: 2px solid #23272a;
+    display: flex;
+  }
+  
+  .post_header {
+    margin-inline: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #23272a;
+    flex-direction: row;
+    text-align: start;
+  }
+  
+  .post_header img {
+    margin-inline-start: 1rem;
+    border: 1px solid #23272a;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .post_header div {
+    margin-inline-start: 1rem;
+  }
+  
+  .post_header h2 {
+    font-size: .9rem;
+    margin-block-end: -.9rem;
+  
+  }
+  
+  .post_header p{
+    font-size: .7rem;
+  }
+  
+  .post_content {
+    display: flex;
+    margin-inline: 1rem;
+    color: #0F1B61;
+    display: flex;
+    flex-direction: column;
+      text-align: start;
+    text-shadow: -1px -1px 0 #eee, 1px -1px 0 #eee, -1px 1px 0 #eee,
+      1px 1px 0 #eee;
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+  }
+  
+  .post_content div h2{
+    font-size: .9rem
+  }
+  
+  .post_content div p{
+    font-size: .7rem;
+  }
+  .post_footer{
+      display: flex;
+      justify-content: space-around;
+      font-size: .6rem;
+  }
+
+  .dp {
+    width: 33%;
+    max-width: 150px;
+    height: 33%;
+    max-height: 150px;
+  }
+  
+  .dp img {
+    border: 3px solid black;
+  }
+  
+  .top_section{
+    width: 700px;
+    max-width: 98%;
+    margin: auto;
+    margin-block-end: 1rem;
+    display: flex;
+  }
+  
+  .person_details{
+    margin-inline-start: .8rem;
+  }
+  

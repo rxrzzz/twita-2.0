@@ -1,18 +1,18 @@
 .comment {
-  width: 794px;
+  width: 700px;
   max-width: 98%;
   margin: auto;
   display: flex;
   flex-direction: column;
   text-align: start;
   border: 3px solid #23272a;
-  padding-inline-start: .8rem;
+
   margin-bottom: 1rem;
   background-color: #f0f0ff;
 }
 
 .comment_header {
-  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: -1.8rem;
 }
