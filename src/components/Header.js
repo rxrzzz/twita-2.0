@@ -6,7 +6,7 @@ const Header = ({ person }) => {
   return (
     <div className={styles.header}>
       <div className={styles.person_details}>
-        <img src={person.dpUrl} alt="Profile Picture" />
+        <Link to='/profile'><img src={person.dpUrl} alt="Profile Picture" /></Link>
       </div>
       <div className={styles.create_post}>
         <Link to="/create_post" className={styles.link}>What's on your mind?</Link>

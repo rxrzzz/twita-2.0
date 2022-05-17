@@ -3,8 +3,6 @@ import useFetch from "../useFetch";
 import Header from "./Header";
 import PostList from "./PostList";
 import styles from "../styles/Home.module.css";
-import image from "../images/logo.png";
-import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Home = () => {
@@ -14,13 +12,13 @@ const Home = () => {
   );
 
   return (
-    <div className={styles.home}>
+    <div>
       <Sidebar/>
-      <div>
-        <div className={styles.header}>
+      <div className={styles.main}>
+        <div>
           <Header person={person} />
         </div>
-        <main className={styles.postlist}>
+        <main>
           <PostList posts={posts} error={postsError} />
         </main>
       </div>

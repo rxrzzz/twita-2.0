@@ -20,10 +20,6 @@
   border-right: 5px solid black;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 .dp {
   width: 100%;
   display: flex;

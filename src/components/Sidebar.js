@@ -10,8 +10,7 @@ const Sidebar = () => {
   }
 
 return <div className={styles.sidebar}>
-      <p>twita.</p>
-      <Link to='/profile' className={styles.link}><span>👩🏽‍🦲</span>Profile</Link>
+      <Link to='/' className={styles.link}>twita.</Link>
       <button onClick={handleLogout}><span>📲</span>Log Out</button>
   </div>;
 };

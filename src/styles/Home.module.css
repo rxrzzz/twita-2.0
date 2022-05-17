@@ -1,31 +1,5 @@
-.app_header{
-    width: 98%;
-    max-width: 800px;
-    margin: auto;
+
+.home{ 
+  border: 1px solid green;
 }
 
-.home{
-  display: flex;
-  position: relative;
-  margin: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-}
-.app_header img{
-    width: 125px;
-    height: 53  px;
-}
-
-.header {
-  width: 98%;
-  max-width: 800px;
-  margin: auto;
-}
-
-.postlist {
-  width: 98%;
-  max-width: 800px;
-  margin: auto;
-}
