@@ -32,29 +32,29 @@ const Comments = () => {
           .post("http://localhost:3020/comments", formik.values)
           .catch((err) => console.log(err));
       }
-      window.location.reload()
-    },validate
-    
+      window.location.reload();
+    },
+    validate,
   });
 
-
-
   return (
-    <form onSubmit={formik.handleSubmit} className={styles.form}>
-      <textarea
-        className={styles.comment_content}
-        name="commentContent"
-        placeholder="write a comment"
-        value={formik.values.commentContent}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-      ></textarea>
+    <div>
+      <form onSubmit={formik.handleSubmit} className={styles.form}>
+        <textarea
+          className={styles.comment_content}
+          name="commentContent"
+          placeholder="write a comment"
+          value={formik.values.commentContent}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        ></textarea>
 
-      <button type="submit">Comment</button>
+        <button type="submit">Comment</button>
+      </form>
       {formik.errors.commentContent && formik.touched.commentContent && (
         <p>{formik.errors.commentContent}</p>
       )}
-    </form>
+    </div>
   );
 };
 

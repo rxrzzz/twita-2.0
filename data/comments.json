@@ -41,6 +41,22 @@
       "commentContent": "aaaaa",
       "postCommentedOn": "1",
       "id": 6
+    },
+    {
+      "commentCreator": "adeyola",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23ffffff",
+      "dateCommented": "17/05/2022, 06:47:21",
+      "commentContent": "This is going to be fun sha. 😂",
+      "postCommentedOn": "1",
+      "id": 7
+    },
+    {
+      "commentCreator": "adeyola",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23ffffff",
+      "dateCommented": "17/05/2022, 06:48:55",
+      "commentContent": "lovaboi 😂",
+      "postCommentedOn": "6",
+      "id": 8
     }
   ]
 }

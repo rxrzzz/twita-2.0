@@ -6,22 +6,22 @@
   margin: auto;
   text-align: start;
   border-left: 4px solid black;
-  margin-bottom: 3rem;
+  margin-block-start: 1rem;
+  margin-block-end: 3rem;
 }
 
 .comment_content {
   width: 100%;
-  height: 2rem;
+  height: 5rem;
   resize: none;
   font-family: "Poppins", sans-serif;
-  transition: height 0.3s;
   border: none;
 }
 
-.comment_content:focus {
-  height: 5rem;
+.comment_content:focus{
   outline: none;
 }
+
 
 .comment_content::placeholder {
   font-family: "Poppins", sans-serif;
