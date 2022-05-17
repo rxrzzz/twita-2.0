@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../useFetch";
 import styles from "../styles/Profile.module.css";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
@@ -9,12 +10,12 @@ const Profile = () => {
   );
 
   return (
-    <div>
+    <div className={styles.profile}>
       <section className={styles.top_section}>
         <div className={styles.dp}>
           <img src={person.dpUrl} alt={person.firstName} />
         </div>
-        <div>
+        <div className={styles.person_details}>
           <h2>
             {person.firstName} {person.lastName}
           </h2>

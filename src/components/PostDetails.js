@@ -1,11 +1,12 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import useFetch from "../useFetch";
 import CommentList from "./CommentList";
 import styles from "../styles/PostDetails.module.css";
 import Comments from "./Comments";
 import backbutton from '../images/back-button.png'
 import { Link } from "react-router-dom";
+import axios from "axios";
 const PostDetails = () => {
   const { id } = useParams();
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
@@ -13,6 +14,13 @@ const PostDetails = () => {
   const { data: comments, postsError } = useFetch(
     "http://localhost:3020/comments"
   );
+  const navigate = useNavigate()
+
+  const handleDelete = () => {
+    axios.delete('http://localhost:3010/posts/' + id)
+    .then(navigate(-1))
+    .catch(err => console.log(err))
+  }
   return (
     <div>
       <div className={styles.topbar}>
@@ -34,7 +42,7 @@ const PostDetails = () => {
             <h2>{post.postContent}</h2>
             <div>
               <p>{post.dateCreated}</p>
-              {personInStorage.username === post.creator && <button>Delete</button>}
+              {personInStorage.username === post.creator && <button onClick={handleDelete}>Delete</button>}
             </div>
           </div>
           <div className={styles.post_footer}>

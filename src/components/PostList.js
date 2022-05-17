@@ -7,7 +7,7 @@ const PostList = ({ posts, postsError }) => {
     <div>
       {postsError && <p>{postsError}</p>}
       {posts &&
-        posts.map((post) => (
+        [...posts].reverse().map((post) => (
           <article key={post.id} className={styles.post}>
             <div className={styles.post_header}>
               <img src={post.creatorDp} width="150px" />

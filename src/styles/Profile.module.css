@@ -1,0 +1,86 @@
+.post {
+    border: 3px solid #23272a;
+    margin-block-end: 0.5rem;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .post_header {
+    margin-inline: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #23272a;
+    flex-direction: row;
+    text-align: start;
+  }
+  
+  .post_header img {
+    margin-inline-start: 1rem;
+    border: 1px solid #23272a;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .post_header div {
+    margin-inline-start: 1rem;
+  }
+  
+  .post_header h2 {
+    font-size: clamp(1.4rem, 1.3vw, 2rem);
+    margin-block-end: -10px;
+  }
+
+  .profile{
+      width: 98%;
+      max-width: 800px;
+      margin: auto;
+  }
+
+  .top_section{
+      display: flex;
+      margin-block-end: 2rem;
+      flex-direction: row;
+  }
+  
+  .post_content {
+    display: flex;
+    margin-inline: 1rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+      text-align: start;
+    text-shadow: -1px -1px 0 #eee, 1px -1px 0 #eee, -1px 1px 0 #eee,
+      1px 1px 0 #eee;
+    text-decoration: none;
+    font-size: clamp(1.2rem, 1.3vw, 1.8rem);
+    border-bottom: 1px solid grey;
+  }
+  
+  .post_footer{
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .dp{
+      width: 33%;
+      max-width: 300px;
+      height: 33%;
+      max-height: 300px;
+  }
+
+  .dp img{
+      border: 3px solid black;
+  }
+
+  .person_details{
+      width: 66%;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+
+  .person_details h2{
+      height: 40%;
+      font-size: clamp(1.5rem, 1.3vw, 3rem);
+  }
