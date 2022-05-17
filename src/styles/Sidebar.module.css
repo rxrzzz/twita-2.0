@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-p{
+.sidebar p{
     font-size: clamp(2rem, 1.3vw, 2.5rem);
     height: 33%;
     font-weight: bolder;
@@ -20,7 +20,7 @@ p{
     cursor: pointer;
 }
 
-p:hover{
+.sidebar p:hover{
     color: #5865f2
 }
 

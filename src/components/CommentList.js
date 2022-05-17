@@ -4,7 +4,8 @@ const CommentList = ({ comments, post, error }) => {
   return (
     <div>
       {comments &&
-        comments
+        [...comments]
+          .reverse()
           .filter((comment) => comment.postCommentedOn == post.id)
           .map((comment) => (
             <article key={comment.id} className={styles.comment}>
