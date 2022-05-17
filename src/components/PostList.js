@@ -10,7 +10,9 @@ const PostList = ({ posts, postsError }) => {
         [...posts].reverse().map((post) => (
           <article key={post.id} className={styles.post}>
             <div className={styles.post_header}>
+              <Link to={`/${post.creator}/profile`}>
               <img src={post.creatorDp} width="150px" />
+              </Link>
               <div>
                 <h2>{post.creatorFirstName} {post.creatorLastName}</h2>
                 <p>@{post.creator}</p>
