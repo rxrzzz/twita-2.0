@@ -1,5 +1,5 @@
 .sidebar {
-  height: 200px;
+  height: 300px;
   width: 300px;
   position: sticky;
   top: 0;
@@ -12,19 +12,40 @@
   flex-direction: column;
 }
 
+p{
+    font-size: clamp(2rem, 1.3vw, 2.5rem);
+    height: 33%;
+    font-weight: bolder;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+p:hover{
+    color: #5865f2
+}
+
 .sidebar button {
   font-size: clamp(1.8rem, 1.3vw, 2.3rem);
   font-family: Roboto;
   background-color: transparent;
   border: none;
+  height: 33%;
 }
 
 .link {
   text-decoration: none;
   color: black;
+  height: 33%;
   font-weight: bold;
 }
 
 span {
   margin-inline-end: 2rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .sidebar{
+        display: none;
+    }
 }

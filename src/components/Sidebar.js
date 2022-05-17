@@ -9,6 +9,7 @@ const Sidebar = () => {
     "http://localhost:3010/posts"
   );
   return <div className={styles.sidebar}>
+      <p>twita.</p>
       <Link to='/' className={styles.link}><span>👩🏽‍🦲</span>Profile</Link>
       <button><span>📲</span>Log Out</button>
   </div>;
