@@ -58,10 +58,10 @@ const Register = () => {
 
   return (
     <div className={styles.registration_form}>
+      <h1>Register</h1>
       <div className={styles.dp_form}>
-        <h1>Register</h1>
-        <div className={styles.dp}>
-          <img src={dpUrl} alt="Profile Picture" />
+        <img src={dpUrl} alt="Profile Picture" />
+        <div className={styles.dp_form_details}>
           <div>
             <label htmlFor="profilePicStyle">Picture Type</label>
             <select

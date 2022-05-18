@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import useFetch from "../useFetch";
 import CommentList from "./CommentList";
 import styles from "../styles/PostDetails.module.css";
 import Comments from "./Comments";
-import backbutton from '../images/back-button.png'
+import backbutton from "../images/back-button.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 const PostDetails = () => {
@@ -14,17 +14,30 @@ const PostDetails = () => {
   const { data: comments, postsError } = useFetch(
     "http://localhost:3020/comments"
   );
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [isLiked, setIsLiked] = useState(false);
 
   const handleDelete = () => {
-    axios.delete('http://localhost:3010/posts/' + id)
-    .then(navigate(-1))
-    .catch(err => console.log(err))
-  }
+    axios
+      .delete("http://localhost:3010/posts/" + id)
+      .then(navigate(-1))
+      .catch((err) => console.log(err));
+  };
+
+  const likeHandler = async () => {
+     axios
+      .put(`http://localhost:3010/posts/${id}`, {
+        ...post,
+        likes: isLiked ? post.likes - 1 : post.likes + 1,
+      })
+      await setIsLiked(!isLiked)
+  };
   return (
     <div>
       <div className={styles.topbar}>
-        <Link to='/'><img src={backbutton} alt="Go back" /></Link>
+        <Link to="/">
+          <img src={backbutton} alt="Go back" />
+        </Link>
       </div>
       {error && <p>{error}</p>}
       {post && (
@@ -42,7 +55,9 @@ const PostDetails = () => {
             <h2>{post.postContent}</h2>
             <div>
               <p>{post.dateCreated}</p>
-              {personInStorage.username === post.creator && <button onClick={handleDelete}>Delete</button>}
+              {personInStorage.username === post.creator && (
+                <button onClick={handleDelete}>Delete</button>
+              )}
             </div>
           </div>
           <div className={styles.post_footer}>
@@ -53,7 +68,7 @@ const PostDetails = () => {
         </div>
       )}
 
-      <Comments/>
+      <Comments />
       <CommentList comments={comments} post={post} error={postsError} />
     </div>
   );

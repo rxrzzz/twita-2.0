@@ -3,6 +3,7 @@ import useFetch from "../useFetch";
 import styles from "../styles/Profile.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import backbutton from "../images/back-button.png";
+import editbutton from '../images/edit.svg'
 
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
@@ -20,7 +21,8 @@ const Profile = () => {
       </div>
       <section className={styles.top_section}>
         <div className={styles.dp}>
-          <img src={person.dpUrl} alt={person.firstName} />
+          <img src={person.dpUrl} alt={person.firstName} className={styles.dpimg}/>
+          <img src={editbutton} alt="Edit Profile" width='20px' height='20px' className={styles.edit}/>
         </div>
         <div className={styles.person_details}>
           <h2>
