@@ -58,7 +58,9 @@ const Register = () => {
 
   return (
     <div className={styles.registration_form}>
-      <h1>Register</h1>
+      <div className={styles.title}>
+        <h1>Create Profile</h1>
+      </div>
       <div className={styles.dp_form}>
         <img src={dpUrl} alt="Profile Picture" />
         <div className={styles.dp_form_details}>
@@ -166,16 +168,13 @@ const Register = () => {
           </div>
 
           <button className={styles.button} type="submit">
-            Submit
+            Register
           </button>
-          <p>
-            Already have an account? <Link to="/login">Login.</Link>
-          </p>
         </form>
       </main>
-      <div className={styles.decorative_image}>
-        <img src={image} alt="#" />
-      </div>
+      <p className={styles.footer}>
+        Already have an account? <Link to="/login">Login.</Link>
+      </p>
     </div>
   );
 };

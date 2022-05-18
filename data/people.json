@@ -69,6 +69,16 @@
       "confirmPassword": "maki",
       "dpUrl": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
       "id": 7
+    },
+    {
+      "firstName": "Samiat",
+      "lastName": "Adeleye",
+      "dateOfBirth": "2022-04-26",
+      "username": "sammy",
+      "password": "sammy",
+      "confirmPassword": "sammy",
+      "dpUrl": "https://avatars.dicebear.com/api/adventurer-neutral/adventurer-neutral.svg?background=%23ff0080",
+      "id": 8
     }
   ]
 }
