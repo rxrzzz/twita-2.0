@@ -59,6 +59,16 @@
       "confirmPassword": "kayy",
       "dpUrl": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
       "id": 6
+    },
+    {
+      "firstName": "Maki",
+      "lastName": "Zenin",
+      "dateOfBirth": "2022-04-30",
+      "username": "maki",
+      "password": "maki",
+      "confirmPassword": "maki",
+      "dpUrl": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+      "id": 7
     }
   ]
 }
