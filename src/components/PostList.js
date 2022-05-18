@@ -26,7 +26,9 @@ const PostList = ({ posts, postsError }) => {
             </Link>
             <div className={styles.post_footer}>
               <p>Like</p>
+              <Link to={`/posts/${post.id}`} >
               <p>Comment</p>
+              </Link>
               <p>Share</p>
             </div>
           </article>

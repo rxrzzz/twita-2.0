@@ -24,7 +24,7 @@ const CreatePost = () => {
       creatorDp: person.dpUrl,
       dateCreated: date.toLocaleString(),
       postContent: "",
-      comments: {},
+      
     },
     onSubmit: () => {
       axios
