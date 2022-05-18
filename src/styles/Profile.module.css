@@ -80,10 +80,12 @@
   max-width: 150px;
   height: 33%;
   max-height: 150px;
+  margin-inline-start: .4rem;
 }
 
 .dp img {
   border: 3px solid black;
+
 }
 
 .top_section{
@@ -91,8 +93,12 @@
   max-width: 98%;
   margin: auto;
   margin-block-end: 1rem;
+  border: 1px solid #0f1b61;
+  align-items: center;
   display: flex;
 }
+
+
 
 .person_details{
   margin-inline-start: .8rem;

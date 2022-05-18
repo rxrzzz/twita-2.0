@@ -15,23 +15,29 @@
   font-size: 1.2rem;
   width: 90%;
   margin: auto;
+  align-items: center;
+  display: flex;
   font-weight: bold;
+}
+.comment_header p {
+  text-decoration: none;
 }
 
 .comment_content {
-  font-size: clamp(1.2rem, 1.3vw, 1.7rem);
+  font-size: .8rem;
   width: 90%;
   margin: auto;
   border-top: 1px solid black;
   display: flex;
+  
   flex-direction: column;
 }
 
 .comment_content h2{
-    margin-bottom: -1.6rem;
+    margin-bottom: -.4rem;
 }
 
 .p{
-    margin-bottom: -2rem;
+    margin-bottom: -.6rem;
 }
 

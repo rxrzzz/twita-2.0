@@ -12,6 +12,7 @@ const CommentList = ({ comments, post, error }) => {
             <article key={comment.id} className={styles.comment}>
               <Link to={`/${comment.commentCreator}/profile`}>
                 <div className={styles.comment_header}>
+                  <img src={comment.commentCreatorDp} alt={comment.commentCreator} width='55px' height='55px'/>
                   <p>@{comment.commentCreator}</p>
                 </div>
               </Link>

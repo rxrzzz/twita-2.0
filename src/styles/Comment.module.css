@@ -10,15 +10,18 @@
 }
 
 .comment_content {
-  width: 90%;
+  width:99%;
   height: 5rem;
+  margin: auto;
   resize: none;
   font-family: "Poppins", sans-serif;
   border: none;
+  border: 2px solid #212C6C;
 }
 
 .comment_content:focus{
   outline: none;
+
 }
 
 
