@@ -54,6 +54,7 @@
 .form{
   border: 1px solid saddlebrown;
   display: flex;
+  margin-block-start: 1rem;
   width: 100%;
   flex-direction: column;
 }
@@ -80,4 +81,8 @@
   width: 90%;
   max-width: 515px;
   margin: auto;
+  padding-block: .3rem;
+  font-family: "Poppins", sans-serif;
+  border: 4px solid black;
+  border-radius: 5px;
 }
