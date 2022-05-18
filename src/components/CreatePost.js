@@ -24,6 +24,7 @@ const CreatePost = () => {
       creatorDp: person.dpUrl,
       dateCreated: date.toLocaleString(),
       postContent: "",
+      likes: 0
       
     },
     onSubmit: () => {
