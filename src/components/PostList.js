@@ -9,15 +9,18 @@ const PostList = ({ posts, postsError }) => {
       {posts &&
         [...posts].reverse().map((post) => (
           <article key={post.id} className={styles.post}>
-            <div className={styles.post_header}>
-              <Link to={`/${post.creator}/profile`}>
-              <img src={post.creatorDp} width="150px" />
-              </Link>
-              <div>
-                <h2>{post.creatorFirstName} {post.creatorLastName}</h2>
-                <p>@{post.creator}</p>
+            <Link to={`/${post.creator}/profile`} className={styles.toplink}>
+              <div className={styles.post_header}>
+                <img src={post.creatorDp} width="150px" />
+
+                <div>
+                  <h2>
+                    {post.creatorFirstName} {post.creatorLastName}
+                  </h2>
+                  <p>@{post.creator}</p>
+                </div>
               </div>
-            </div>
+            </Link>
             <Link to={`/posts/${post.id}`} className={styles.post_content}>
               <div>
                 <h2>{post.postContent}</h2>
@@ -26,8 +29,8 @@ const PostList = ({ posts, postsError }) => {
             </Link>
             <div className={styles.post_footer}>
               <p>Like</p>
-              <Link to={`/posts/${post.id}`} >
-              <p>Comment</p>
+              <Link to={`/posts/${post.id}`}>
+                <p>Comment</p>
               </Link>
               <p>Share</p>
             </div>

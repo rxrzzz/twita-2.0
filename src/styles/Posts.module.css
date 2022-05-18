@@ -62,3 +62,13 @@
     justify-content: space-around;
     font-size: .6rem;
 }
+
+.toplink{
+  text-decoration: none;
+  color: #0F1B61;
+  transition: color .4s;
+}
+
+.toplink:hover{
+  color: #23272a;
+}
