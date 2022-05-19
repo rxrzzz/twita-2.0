@@ -4,7 +4,6 @@ import comment from "../images/comment.svg";
 import styles from "../styles/Posts.module.css";
 
 const PostList = ({ posts, postsError }) => {
-  const like = useRef();
   return (
     <div>
       {postsError && <p>{postsError}</p>}
