@@ -68,7 +68,8 @@
       "dateCreated": "17/05/2022, 21:44:27",
       "postContent": "Test drive hehe. 🎈",
       "comments": {},
-      "id": 7
+      "id": 7,
+      "postComments": 1
     },
     {
       "creator": "adeleye",
@@ -127,7 +128,8 @@
       "creatorDp": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
       "dateCreated": "18/05/2022, 15:25:29",
       "postContent": "i'm back.",
-      "id": 13
+      "id": 13,
+      "postComments": 2
     },
     {
       "creator": "kayy",

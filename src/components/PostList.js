@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import comment from "../images/comment.svg";
 import styles from "../styles/Posts.module.css";
 
 const PostList = ({ posts, postsError }) => {
-  const like =useRef()
+  const like = useRef();
   return (
     <div>
       {postsError && <p>{postsError}</p>}
@@ -30,8 +31,9 @@ const PostList = ({ posts, postsError }) => {
             </Link>
             <div className={styles.post_footer}>
               <p>Like</p>
-              <Link to={`/posts/${post.id}`}>
-                <p>Comment</p>
+              <Link to={`/posts/${post.id}`} className={styles.comment_link}>
+                <img src={comment} alt="Comment" width="20px" />{" "}
+                <p>{post.postComments}</p>
               </Link>
               <p>Share</p>
             </div>
