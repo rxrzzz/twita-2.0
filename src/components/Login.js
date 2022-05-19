@@ -3,14 +3,13 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
-import styles from '../styles/Login.module.css'
-
+import styles from "../styles/Login.module.css";
 
 const Login = () => {
   const { data: persons, error } = useFetch("http://localhost:7000/people");
-  const navigate =useNavigate()
+  const navigate = useNavigate();
 
-/*Check Out the Register section of the codebase to understand the validate function and the Formik library */
+  /*Check Out the Register section of the codebase to understand the validate function and the Formik library */
   const validate = (values) => {
     const errors = {};
     if (!values.username) {
@@ -53,10 +52,13 @@ const Login = () => {
       if (formik.errors.length > 0) {
         void 0;
       } else {
-        for (let i of persons){
-          if  (values.username === i.username && values.password === i.password){
-            localStorage.setItem("personInStorage", JSON.stringify(i))
-            navigate('/home')
+        for (let i of persons) {
+          if (
+            values.username === i.username &&
+            values.password === i.password
+          ) {
+            localStorage.setItem("personInStorage", JSON.stringify(i));
+            navigate("/home");
           }
         }
       }
@@ -67,8 +69,8 @@ const Login = () => {
   return (
     <div className={styles.login_form}>
       {error && <div>{error}</div>}
-      <form onSubmit={formik.handleSubmit}>
-        <div>
+      <form onSubmit={formik.handleSubmit} className={styles.form}>
+        <div className={styles.username}>
           <label htmlFor="username">Username</label>
           <input
             type="text"
@@ -80,7 +82,7 @@ const Login = () => {
             <div>{formik.errors.username}</div>
           )}
         </div>
-        <div>
+        <div className={styles.password}>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -92,9 +94,16 @@ const Login = () => {
             <div>{formik.errors.username}</div>
           )}
         </div>
-        <button type="submit">Submit</button>
-        <p>Do not have an account? <Link to='/register'>Register.</Link></p>
+        <button type="submit" className={styles.submit_button}>
+        <button className={styles.guest_button}>Login As Guest</button>
+          Submit
+        </button>
+
+        <p>
+          Do not have an account? <Link to="/register">Register.</Link>
+        </p>
       </form>
+
     </div>
   );
 };
