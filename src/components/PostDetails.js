@@ -45,16 +45,18 @@ const PostDetails = () => {
       {error && <p>{error}</p>}
       {post && (
         <div className={styles.post}>
-          <Link to='/pro'></Link>
           <div className={styles.post_header}>
-            <img src={post.creatorDp} alt={post.creator} />
-            <div>
-              <h2>
-                {post.creatorFirstName} {post.creatorLastName}
-              </h2>
-              <p>@{post.creator}</p>
-            </div>
+            <Link to="/:username/profile" className={styles.profilelink}>
+              <img src={post.creatorDp} alt={post.creator} />
+              <div>
+                <h2>
+                  {post.creatorFirstName} {post.creatorLastName}
+                </h2>
+                <p>@{post.creator}</p>
+              </div>
+            </Link>
           </div>
+
           <div className={styles.post_content}>
             <h2>{post.postContent}</h2>
             <div>

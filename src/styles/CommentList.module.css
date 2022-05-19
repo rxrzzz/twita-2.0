@@ -11,6 +11,18 @@
   background-color: #f0f0ff;
 }
 
+
+.profilelink{
+align-items: center;
+  display: flex;
+  color: #23272a;
+  text-decoration: none
+}
+
+.profilelink p{
+  margin-inline-start: .7rem;
+  font-size: .9rem;
+}
 .comment_header {
   font-size: 1.2rem;
   width: 90%;
