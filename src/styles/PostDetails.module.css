@@ -90,6 +90,12 @@
 .post_content div p {
   font-size: 0.7rem;
 }
+
+.post_content button{
+  background-color: #0f1b61;
+  color: white;
+  font-family: Poppins;
+}
 .post_footer {
   align-items: center;
   display: flex;

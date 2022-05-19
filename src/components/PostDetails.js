@@ -64,7 +64,7 @@ const PostDetails = () => {
             <div>
               <p>{post.dateCreated}</p>
               {personInStorage.username === post.creator && (
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete} className={styles.delete}>Delete</button>
               )}
             </div>
           </div>
