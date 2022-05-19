@@ -48,12 +48,11 @@ const Comments = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         ></textarea>
-
+        {formik.errors.commentContent && formik.touched.commentContent && (
+          <p>{formik.errors.commentContent}</p>
+        )}
         <button type="submit">Comment</button>
       </form>
-      {formik.errors.commentContent && formik.touched.commentContent && (
-        <p>{formik.errors.commentContent}</p>
-      )}
     </div>
   );
 };

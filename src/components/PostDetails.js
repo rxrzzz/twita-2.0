@@ -45,6 +45,7 @@ const PostDetails = () => {
       {error && <p>{error}</p>}
       {post && (
         <div className={styles.post}>
+          <Link to='/pro'></Link>
           <div className={styles.post_header}>
             <img src={post.creatorDp} alt={post.creator} />
             <div>

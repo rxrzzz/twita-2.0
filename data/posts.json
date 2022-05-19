@@ -136,7 +136,8 @@
       "creatorDp": "https://avatars.dicebear.com/api/open-peeps/open-peeps.svg?background=%23ff0080",
       "dateCreated": "18/05/2022, 15:49:53",
       "postContent": "Mr Morale and The Big Steppers. 😍😍😍",
-      "id": 14
+      "id": 14,
+      "postComments": 1
     },
     {
       "creator": "kayy",
@@ -146,17 +147,8 @@
       "dateCreated": "18/05/2022, 21:45:11",
       "postContent": "is liked has a lot of bugs yunno.",
       "likes": 6,
-      "id": 15
-    },
-    {
-      "creator": "sammy",
-      "creatorFirstName": "Samiat",
-      "creatorLastName": "Adeleye",
-      "creatorDp": "https://avatars.dicebear.com/api/adventurer-neutral/adventurer-neutral.svg?background=%23ff0080",
-      "dateCreated": "18/05/2022, 23:04:13",
-      "postContent": "Uhhhh hi. I'm the first person to test the new form. 😁",
-      "likes": 0,
-      "id": 16
+      "id": 15,
+      "postComments": 4
     }
   ]
 }
