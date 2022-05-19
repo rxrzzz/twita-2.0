@@ -1,0 +1,21 @@
+.topbar img{
+    width: 30px;
+    margin-block-end: .4rem;
+  }
+  
+  .topbar{
+    width: 98%;
+    max-width: 700px;
+    margin: auto;
+    margin-block-end: 1rem;
+    border-bottom: 2px solid #23272a;
+    display: flex;
+  }
+  
+  
+  .topbar button{
+    background-color: transparent;
+    border: none;
+  }
+
+  

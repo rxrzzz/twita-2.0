@@ -7,6 +7,7 @@ import CreatePost from "./components/CreatePost";
 import PostDetails from "./components/PostDetails";
 import Profile from "./components/Profile";
 import FriendProfile from "./components/FriendProfile";
+import EditProfile from "./components/EditProfile";
 
 function App() {
   const person = localStorage.getItem("personInStorage");
@@ -21,6 +22,7 @@ function App() {
           <Route path="/create_post" element={<CreatePost />} />
           <Route exact path="/posts/:id" element={<PostDetails />} />
           <Route exact path=':username/profile' element={<FriendProfile/>}/>
+          <Route path ='profile/editprofile' element={<EditProfile/>}/>
           <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
