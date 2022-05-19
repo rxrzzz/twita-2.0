@@ -1,138 +1,15 @@
 {
   "posts": [
     {
-      "creator": "adeleye",
-      "creatorFirstName": "Adeleye",
-      "creatorLastName": "Temiloluwa",
-      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
-      "dateCreated": "15/05/2022, 12:28:45",
-      "postContent": "alaaaaaaaaafin.",
-      "comments": {},
-      "id": 1
-    },
-    {
-      "creator": "ridwan",
-      "creatorFirstName": "Adebakin",
-      "creatorLastName": "Ridwan",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
-      "dateCreated": "15/05/2022, 12:37:21",
-      "postContent": "werey leleyi ni",
-      "comments": {},
-      "id": 2
-    },
-    {
-      "creator": "ridwan",
-      "creatorFirstName": "Adebakin",
-      "creatorLastName": "Ridwan",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
-      "dateCreated": "16/05/2022, 05:40:01",
-      "postContent": "akin",
-      "comments": {},
-      "id": 3
-    },
-    {
-      "creator": "ridwan",
-      "creatorFirstName": "Adebakin",
-      "creatorLastName": "Ridwan",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
-      "dateCreated": "16/05/2022, 12:36:08",
-      "postContent": "ohayo mina san. daijyobu deska?",
-      "comments": {},
-      "id": 4
-    },
-    {
-      "creator": "ridwan",
-      "creatorFirstName": "Adebakin",
-      "creatorLastName": "Ridwan",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%23ff0080",
-      "dateCreated": "16/05/2022, 18:50:39",
-      "postContent": "Nike Dunks come my way.",
-      "comments": {},
-      "id": 5
-    },
-    {
-      "creator": "adeleye",
-      "creatorFirstName": "Adeleye",
-      "creatorLastName": "Temiloluwa",
-      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
-      "dateCreated": "17/05/2022, 21:28:48",
-      "postContent": "ohayo.",
-      "comments": {},
-      "id": 6
-    },
-    {
-      "creator": "adeleye",
-      "creatorFirstName": "Adeleye",
-      "creatorLastName": "Temiloluwa",
-      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
-      "dateCreated": "17/05/2022, 21:44:27",
-      "postContent": "Test drive hehe. 🎈",
-      "comments": {},
-      "id": 7,
-      "postComments": 1
-    },
-    {
-      "creator": "adeleye",
-      "creatorFirstName": "Adeleye",
-      "creatorLastName": "Temiloluwa",
-      "creatorDp": "https://avatars.dicebear.com/api/male/male.svg?background=%23000000",
-      "dateCreated": "17/05/2022, 21:44:45",
-      "postContent": "Mubarak is a simp. 🕶",
-      "comments": {},
-      "id": 8
-    },
-    {
-      "creator": "afo",
-      "creatorFirstName": "Afolabi",
-      "creatorLastName": "Afo",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
-      "dateCreated": "17/05/2022, 21:46:20",
-      "postContent": "I'm new to Twita. David is queer though.",
-      "comments": {},
-      "id": 9,
-      "postComments": 4
-    },
-    {
-      "creator": "afo",
-      "creatorFirstName": "Afolabi",
-      "creatorLastName": "Afo",
-      "creatorDp": "https://avatars.dicebear.com/api/big-smile/big-smile.svg?background=%2300ffff",
-      "dateCreated": "17/05/2022, 21:52:46",
-      "postContent": "I need to go eat something.",
-      "comments": {},
-      "id": 10
-    },
-    {
       "creator": "maki",
       "creatorFirstName": "Maki",
       "creatorLastName": "Zenin",
       "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
-      "dateCreated": "17/05/2022, 22:51:59",
-      "postContent": "I have the ugliest profile picture here lol. ",
-      "comments": {},
-      "id": 11,
-      "postComments": 1
-    },
-    {
-      "creator": "maki",
-      "creatorFirstName": "Maki",
-      "creatorLastName": "Zenin",
-      "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
-      "dateCreated": "17/05/2022, 22:53:10",
-      "postContent": "I'll be adding some other functionalities tomorrow. comments will be viewed on the profile picture page blah blah balh.",
-      "comments": {},
-      "id": 12
-    },
-    {
-      "creator": "maki",
-      "creatorFirstName": "Maki",
-      "creatorLastName": "Zenin",
-      "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
-      "dateCreated": "19/05/2022, 20:08:55",
-      "postContent": "hiiiiiii",
+      "dateCreated": "19/05/2022, 20:24:52",
+      "postContent": "guest account. 😁",
       "likes": 0,
-      "postComments": 4,
-      "id": 13
+      "postComments": 1,
+      "id": 1
     }
   ]
 }

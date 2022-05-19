@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import useFetch from "../useFetch";
 import CommentList from "./CommentList";
 import styles from "../styles/PostDetails.module.css";
 import Comments from "./Comments";
-import comment from '../images/comment.svg'
+import comment from "../images/comment.svg";
 import backbutton from "../images/back-button.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -16,7 +16,6 @@ const PostDetails = () => {
     "http://localhost:3020/comments"
   );
   const navigate = useNavigate();
-  const [isLiked, setIsLiked] = useState(false);
 
   const handleDelete = () => {
     axios
@@ -29,13 +28,15 @@ const PostDetails = () => {
     navigate(-1);
   };
 
-  const likeHandler = async () => {
-    axios.put(`http://localhost:3010/posts/${id}`, {
-      ...post,
-      likes: isLiked ? post.likes - 1 : post.likes + 1,
-    });
-    await setIsLiked(!isLiked);
-  };
+  useEffect(() => {
+    comments &&
+      axios.put(`http://localhost:3010/posts/${post.id}`, {
+        ...post,
+        postComments: comments.filter(
+          (comment) => comment.postCommentedOn == post.id
+        ).length,
+      });
+  }, [comments]);
   return (
     <div>
       <div className={styles.topbar}>
