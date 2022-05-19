@@ -19,7 +19,7 @@ const Home = () => {
           <Header person={person} />
         </div>
         <main>
-          <PostList posts={posts} error={postsError} />
+          <PostList posts={posts} error={postsError} person={person}/>
         </main>
       </div>
     </div>
