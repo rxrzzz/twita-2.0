@@ -24,20 +24,23 @@ const PostDetails = () => {
       .catch((err) => console.log(err));
   };
 
+  const handleNavigate = () => {
+    navigate(-1);
+  };
+
   const likeHandler = async () => {
-     axios
-      .put(`http://localhost:3010/posts/${id}`, {
-        ...post,
-        likes: isLiked ? post.likes - 1 : post.likes + 1,
-      })
-      await setIsLiked(!isLiked)
+    axios.put(`http://localhost:3010/posts/${id}`, {
+      ...post,
+      likes: isLiked ? post.likes - 1 : post.likes + 1,
+    });
+    await setIsLiked(!isLiked);
   };
   return (
     <div>
       <div className={styles.topbar}>
-        <Link to="/">
+        <button onClick={handleNavigate}>
           <img src={backbutton} alt="Go back" />
-        </Link>
+        </button>
       </div>
       {error && <p>{error}</p>}
       {post && (

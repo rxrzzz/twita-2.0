@@ -1,10 +1,10 @@
 .post {
   border: 3px solid #23272a;
-  border-top: none;
   background-color: transparent;
   width: 700px;
   max-width: 98%;
   margin: auto;
+  margin-block-end: .4rem;
 }
 
 .post_header {
