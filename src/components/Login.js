@@ -95,15 +95,13 @@ const Login = () => {
           )}
         </div>
         <button type="submit" className={styles.submit_button}>
-        <button className={styles.guest_button}>Login As Guest</button>
           Submit
         </button>
-
+        <button className={styles.guest_button}>Login As Guest</button>
         <p>
           Do not have an account? <Link to="/register">Register.</Link>
         </p>
       </form>
-
     </div>
   );
 };
