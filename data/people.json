@@ -51,16 +51,6 @@
       "id": 5
     },
     {
-      "firstName": "Kayy",
-      "lastName": "isAngry",
-      "dateOfBirth": "2022-04-27",
-      "username": "kayy",
-      "password": "kayy",
-      "confirmPassword": "kayy",
-      "dpUrl": "https://avatars.dicebear.com/api/big-ears/big-ears.svg?background=%230000ff",
-      "id": 6
-    },
-    {
       "firstName": "Maki",
       "lastName": "Zenin",
       "dateOfBirth": "2022-04-30",
