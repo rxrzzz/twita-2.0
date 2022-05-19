@@ -89,7 +89,8 @@
       "dateCreated": "17/05/2022, 21:46:20",
       "postContent": "I'm new to Twita. David is queer though.",
       "comments": {},
-      "id": 9
+      "id": 9,
+      "postComments": 4
     },
     {
       "creator": "afo",
@@ -121,6 +122,17 @@
       "postContent": "I'll be adding some other functionalities tomorrow. comments will be viewed on the profile picture page blah blah balh.",
       "comments": {},
       "id": 12
+    },
+    {
+      "creator": "maki",
+      "creatorFirstName": "Maki",
+      "creatorLastName": "Zenin",
+      "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+      "dateCreated": "19/05/2022, 20:08:55",
+      "postContent": "hiiiiiii",
+      "likes": 0,
+      "postComments": 4,
+      "id": 13
     }
   ]
 }

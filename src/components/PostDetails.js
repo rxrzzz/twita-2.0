@@ -4,6 +4,7 @@ import useFetch from "../useFetch";
 import CommentList from "./CommentList";
 import styles from "../styles/PostDetails.module.css";
 import Comments from "./Comments";
+import comment from '../images/comment.svg'
 import backbutton from "../images/back-button.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -68,7 +69,10 @@ const PostDetails = () => {
           </div>
           <div className={styles.post_footer}>
             <p>Like</p>
-            <p>Comment</p>
+            <Link to={`/posts/${post.id}`} className={styles.comment_link}>
+              <img src={comment} alt="Comment" width="20px" />{" "}
+              <p>{post.postComments}</p>
+            </Link>
             <p>Share</p>
           </div>
         </div>

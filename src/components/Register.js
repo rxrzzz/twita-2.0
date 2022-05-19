@@ -1,15 +1,15 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Register.module.css";
-import image from "../images/larry1.svg";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import useFetch from "../useFetch";
 
 const Register = () => {
   /*The use navigate method is meant for switching between routes */
   const history = useNavigate();
-
+  const { data: profiles } = useFetch("http://localhost:7000/people");
   const [dpStyle, setDpStyle] = useState("male");
   const [dpColor, setDpColor] = useState("000000");
   const [dpUrl, setDpUrl] = useState(
@@ -24,8 +24,45 @@ const Register = () => {
       )}`
     );
   }, [dpStyle, dpColor]);
+
   /*Formik is a React library used for handling form validations.
   It is a tedious process using HTML Constraints and the Constraints Validation API */
+
+  const validate = (values) => {
+    const errors = {};
+
+    if (values.username) {
+      for (let i of profiles) {
+        if (i["username"] == values.username) {
+          errors.username = "username not available";
+        }
+      }
+    } else if (!values.username) {
+      errors.username = "enter your username";
+      console.log(errors.username);
+    }
+
+    if (!values.firstName) {
+      errors.firstName = "enter your first name";
+    } else if (!values.lastName) {
+      errors.lastName = "enter your last name";
+    } else if (!values.dateOfBirth) {
+      errors.dateOfBirth = "choose date of birth";
+    } else if (!values.username) {
+      errors.username = "enter your desired username";
+    }
+
+    if (!values.password) {
+      errors.password = "enter a password";
+    } else if (!values.confirmPassword) {
+      errors.confirmPassword = "please confirm your password";
+    }
+
+    if (values.password != values.confirmPassword) {
+      errors.confirmPassword = "input the correct password";
+    }
+    return errors;
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -47,6 +84,7 @@ const Register = () => {
         })
         .then(history("/login"));
     },
+    validate,
   });
 
   /*Read up on Formik from their website:  https://formik.org ,
@@ -110,6 +148,9 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.firstName && formik.errors.firstName && (
+              <p className={styles.error}>{formik.errors.firstName}</p>
+            )}
           </div>
 
           <div>
@@ -121,6 +162,9 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.lastName && formik.errors.lastName && (
+              <p className={styles.error}>{formik.errors.lastName}</p>
+            )}
           </div>
 
           <div>
@@ -132,6 +176,9 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.dateOfBirth && formik.errors.dateOfBirth && (
+              <p className={styles.error}>{formik.errors.dateOfBirth}</p>
+            )}
           </div>
 
           <div>
@@ -143,6 +190,9 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.username && formik.errors.username && (
+              <p className={styles.error}>{formik.errors.username}</p>
+            )}
           </div>
 
           <div>
@@ -154,6 +204,9 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.password && formik.errors.password && (
+              <p className={styles.error}>{formik.errors.password}</p>
+            )}
           </div>
 
           <div>
@@ -165,6 +218,10 @@ const Register = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            {formik.touched.confirmPassword &&
+              formik.errors.confirmPassword && (
+                <p className={styles.error}>{formik.errors.confirmPassword}</p>
+              )}
           </div>
 
           <button className={styles.button} type="submit">

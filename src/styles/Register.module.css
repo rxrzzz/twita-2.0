@@ -5,7 +5,9 @@
   margin: auto;
   border: 3px solid #0f1b61;
 }
-
+.error{
+  color: red;
+}
 .title {
   max-width: 515px;
   width: 90%;

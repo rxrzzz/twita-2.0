@@ -36,6 +36,22 @@ const Login = () => {
     return errors;
   };
 
+  const data = {
+    firstName: "Maki",
+    lastName: "Zenin",
+    dateOfBirth: "2022-04-30",
+    username: "maki",
+    password: "maki",
+    confirmPassword: "maki",
+    dpUrl: "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+    id: 7
+  }
+
+  const handleGuest = () => {
+    localStorage.setItem("personInStorage", JSON.stringify(data))
+    navigate('/home')
+  }
+
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -79,7 +95,7 @@ const Login = () => {
             onBlur={formik.handleBlur}
           />
           {formik.errors.username && formik.touched.username && (
-            <div>{formik.errors.username}</div>
+            <div className={styles.error}>{formik.errors.username}</div>
           )}
         </div>
         <div className={styles.password}>
@@ -90,17 +106,19 @@ const Login = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {formik.errors.username && formik.touched.username && (
-            <div>{formik.errors.username}</div>
+          {formik.errors.password && formik.touched.password && (
+            <div className={styles.error}>{formik.errors.password}</div>
           )}
         </div>
-        <button type="submit" className={styles.submit_button}>
-          Submit
-        </button>
-        <button className={styles.guest_button}>Login As Guest</button>
-        <p>
-          Do not have an account? <Link to="/register">Register.</Link>
-        </p>
+        <div className={styles.form_footer}>
+          <button type="submit" className={styles.submit_button}>
+            Submit
+          </button>
+          <button className={styles.guest_button} onClick={handleGuest}>Login As Guest</button>
+          <p>
+            Do not have an account? <Link to="/register">Register.</Link>
+          </p>
+        </div>
       </form>
     </div>
   );

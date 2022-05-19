@@ -14,10 +14,21 @@
 
 .profilelink {
   text-decoration: none;
+  align-items: center;
   display: flex;
   color: #23272a;
 }
 
+.comment_link {
+  display: flex;
+  text-decoration: none;
+}
+
+.comment_link p {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-inline-start: 0.5rem;
+}
 .topbar button {
   background-color: transparent;
   border: none;
@@ -80,6 +91,7 @@
   font-size: 0.7rem;
 }
 .post_footer {
+  align-items: center;
   display: flex;
   justify-content: space-around;
   font-size: 0.6rem;
