@@ -8,7 +8,7 @@ import editbutton from '../images/edit.svg'
 const Profile = () => {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
   const { data: posts, error: postsError } = useFetch(
-    "http://localhost:7000/posts"
+    "http://localhost:3010/posts"
   );
   const navigate = useNavigate()
 

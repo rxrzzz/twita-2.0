@@ -29,7 +29,7 @@ const Comments = () => {
         void 0;
       } else {
         await axios
-          .post("http://localhost:7000/comments", formik.values)
+          .post("http://localhost:3020/comments", formik.values)
           .catch((err) => console.log(err));
       }
       window.location.reload();

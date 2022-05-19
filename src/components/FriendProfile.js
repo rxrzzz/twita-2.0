@@ -9,7 +9,7 @@ const FriendProfile = () => {
   const person = useFetch(`http://localhost:7000/people?username=${username}`)
     .data[0];
   const { data: posts, error: postsError } = useFetch(
-    "http://localhost:7000/posts"
+    "http://localhost:3010/posts"
   );
 const navigate = useNavigate()
   return (

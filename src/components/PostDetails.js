@@ -11,15 +11,15 @@ import axios from "axios";
 const PostDetails = () => {
   const { id } = useParams();
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
-  const { data: post, error } = useFetch("http://localhost:7000/posts/" + id);
+  const { data: post, error } = useFetch("http://localhost:3010/posts/" + id);
   const { data: comments, postsError } = useFetch(
-    "http://localhost:7000/comments"
+    "http://localhost:3020/comments"
   );
   const navigate = useNavigate();
 
   const handleDelete = () => {
     axios
-      .delete("http://localhost:7000/posts/" + id)
+      .delete("http://localhost:3010/posts/" + id)
       .then(navigate(-1))
       .catch((err) => console.log(err));
   };
@@ -30,7 +30,7 @@ const PostDetails = () => {
 
   useEffect(() => {
     comments &&
-      axios.put(`http://localhost:7000/posts/${post.id}`, {
+      axios.put(`http://localhost:3020/posts/${post.id}`, {
         ...post,
         postComments: comments.filter(
           (comment) => comment.postCommentedOn == post.id

@@ -7,6 +7,14 @@
       "commentContent": "😀",
       "postCommentedOn": "1",
       "id": 1
+    },
+    {
+      "commentCreator": "maki",
+      "commentCreatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+      "dateCommented": "19/05/2022, 21:26:00",
+      "commentContent": "breh",
+      "postCommentedOn": "3",
+      "id": 2
     }
   ]
 }

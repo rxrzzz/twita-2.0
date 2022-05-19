@@ -10,6 +10,28 @@
       "likes": 0,
       "postComments": 1,
       "id": 1
+    },
+    {
+      "creator": "maki",
+      "creatorFirstName": "Maki",
+      "creatorLastName": "Zenin",
+      "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+      "dateCreated": "19/05/2022, 21:25:44",
+      "postContent": "hi",
+      "likes": 0,
+      "postComments": 0,
+      "id": 2
+    },
+    {
+      "creator": "maki",
+      "creatorFirstName": "Maki",
+      "creatorLastName": "Zenin",
+      "creatorDp": "https://avatars.dicebear.com/api/croodles-neutral/croodles-neutral.svg?background=%2300ff00",
+      "dateCreated": "19/05/2022, 21:25:52",
+      "postContent": "working",
+      "likes": 0,
+      "postComments": 1,
+      "id": 3
     }
   ]
 }
