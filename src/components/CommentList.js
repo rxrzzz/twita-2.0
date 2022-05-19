@@ -5,13 +5,13 @@ import styles from "../styles/CommentList.module.css";
 const CommentList = ({ comments, post, error }) => {
   useEffect(() => {
     comments &&
-      axios.put(`http://localhost:3010/posts/${post.id}`, {
+      axios.put(`http://localhost:7000/posts/${post.id}`, {
         ...post,
         postComments: comments.filter(
           (comment) => comment.postCommentedOn == post.id
         ).length,
       });
-  }, [comments]);
+  }, [comments, post]);
   return (
     <div>
       {comments &&

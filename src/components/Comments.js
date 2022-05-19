@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
-import { useNavigate, useParams } from "react-router";
+import { useParams } from "react-router";
 import styles from "../styles/Comment.module.css";
 
 const Comments = () => {
@@ -29,7 +29,7 @@ const Comments = () => {
         void 0;
       } else {
         await axios
-          .post("http://localhost:3020/comments", formik.values)
+          .post("http://localhost:7000/comments", formik.values)
           .catch((err) => console.log(err));
       }
       window.location.reload();

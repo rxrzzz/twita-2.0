@@ -1,5 +1,16 @@
 {
   "people": [
-
-  ]
+    {
+      "firstName": "Uzumaki",
+      "lastName": "Naruto",
+      "dateOfBirth": "2022-04-27",
+      "username": "uzumaki",
+      "password": "uzumaki",
+      "confirmPassword": "uzumaki",
+      "dpUrl": "https://avatars.dicebear.com/api/big-ears-neutral/big-ears-neutral.svg?background=%23408080",
+      "id": 1
+    }
+  ],
+  "posts": [],
+  "comments": []
 }

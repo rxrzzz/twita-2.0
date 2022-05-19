@@ -30,7 +30,7 @@ const CreatePost = () => {
     },
     onSubmit: () => {
       axios
-        .post("http://localhost:3010/posts", formik.values)
+        .post("http://localhost:7000/posts", formik.values)
         .then(navigate(-1))
         .catch((err) => console.log(err));
     },

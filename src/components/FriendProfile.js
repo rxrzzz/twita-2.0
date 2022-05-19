@@ -9,7 +9,7 @@ const FriendProfile = () => {
   const person = useFetch(`http://localhost:7000/people?username=${username}`)
     .data[0];
   const { data: posts, error: postsError } = useFetch(
-    "http://localhost:3010/posts"
+    "http://localhost:7000/posts"
   );
 const navigate = useNavigate()
   return (
@@ -40,7 +40,7 @@ const navigate = useNavigate()
                 .map((post) => (
                   <article key={post.id} className={styles.post}>
                     <div className={styles.post_header}>
-                      <img src={post.creatorDp} width="150px" />
+                      <img src={post.creatorDp} width="150px" alt={post.creator}/>
                       <div>
                         <h2>
                           {post.creatorFirstName} {post.creatorLastName}

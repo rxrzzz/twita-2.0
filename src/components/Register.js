@@ -39,7 +39,6 @@ const Register = () => {
       }
     } else if (!values.username) {
       errors.username = "enter your username";
-      console.log(errors.username);
     }
 
     if (!values.firstName) {
@@ -100,7 +99,7 @@ const Register = () => {
         <h1>Create Profile</h1>
       </div>
       <div className={styles.dp_form}>
-        <img src={dpUrl} alt="Profile Picture" />
+        <img src={dpUrl} alt="#" />
         <div className={styles.dp_form_details}>
           <div>
             <label htmlFor="profilePicStyle">Picture Type</label>
