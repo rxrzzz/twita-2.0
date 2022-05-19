@@ -3,6 +3,8 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
+import styles from '../styles/Login.module.css'
+
 
 const Login = () => {
   const { data: persons, error } = useFetch("http://localhost:7000/people");
@@ -63,7 +65,7 @@ const Login = () => {
   });
 
   return (
-    <div>
+    <div className={styles.login_form}>
       {error && <div>{error}</div>}
       <form onSubmit={formik.handleSubmit}>
         <div>
